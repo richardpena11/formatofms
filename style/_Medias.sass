@@ -1,0 +1,802 @@
+@media screen and (min-width: 1200px)
+
+    main
+        p
+            font-size: 20px
+        .participantes
+            font-size: 20px
+        .jornada
+            .enfrentamientos
+                .enfren
+                    font-size: 20px
+                    .frees
+                        width: 200px
+                    .freesInter
+                        width: 100px
+            .botonesBatallas
+                .batallas
+                    a
+                        padding: 12px
+                        font-size: 20px
+                        font-weight: 900
+            .curiosidades
+                p
+                    font-size: 20px
+            .table
+                .row
+                    span
+                        font-size: 20px
+            .mcClasificados
+                .mc
+                    font-size: 20px
+            .mcClasificadosLarge
+                display: flex
+            .mcClasificadosMedium
+                display: none
+
+@media screen and (min-width: 901px)
+
+    .img-movil-deluxe
+        display: none
+
+@media screen and (max-width: 1150px)
+    header
+        .anclas
+            .anclasMenu
+                ul
+                    .jornadaMedium
+                        display: flex
+                    .jornadaLarge
+                        display: none
+
+@media screen and (max-width: 1120px)
+    main
+        .jornada
+            .botonesSeis
+                display: none
+            .botonesSeisResponsive
+                display: flex
+
+@media screen and (max-width: 1000px)
+    main
+        .estadisticas
+            .mvp
+                .ptb
+                    .ptbJornada
+                        width: 50%
+                    .ptbExtras
+                        width: 50%
+                        flex-direction: column
+
+@media screen and (max-width: 930px)
+    main
+        .jornada
+            .botonesNormales
+                display: none
+            .botonesNormalesResponsive
+                display: flex
+            .botonesCuatro
+                display: flex
+            .botonesCuatroResponsive
+                display: none
+            .botonesSiete
+                display: flex
+            .botonesSieteResponsive
+                display: none
+
+@media screen and (max-width: 900px)
+    .img-deluxe
+        display: none
+
+    main
+        .jornada
+            .torneo
+                .torneoColumn
+                    .torneoTitle
+                        width: 80px
+                        font-size: 16px
+                        margin-top: 5px
+                        margin-left: 3px
+                    .torneoBatalla
+                        margin: 5px 2px
+                        .torneoParticipante
+                            width: 90px
+                            font-size: 16px
+                            padding: 10px 0
+                            margin: 5px 0
+
+                .torneoGanador
+                    .torneoBatalla
+                        margin-top: 100px
+                        .torneoParticipante
+                            width: 80px
+                            margin: 0
+                        span
+                            font-size: 25px
+                            margin-bottom: 10px
+                .torneoFinal
+                    .torneoBatalla
+                        margin-top: 210px
+                        height: 100%
+
+@media screen and (max-width: 850px)
+
+    header
+        .menu
+            position: absolute
+            right: 120px
+            margin-top: 20px
+            > ul
+                > li
+                    > a, > .span
+                        padding: 21px 12px
+
+@media screen and (max-width: 800px)
+    main
+        .jornada
+            .table
+                .tableLegend
+                    display: none
+                .tableLegendResponsive
+                    display: flex
+
+@media screen and (max-width: 768px), (max-height: 500px)
+
+    header
+        .container-menu
+            .menu-bar
+                display: flex
+                span
+                    color: white
+                    padding: 16px
+                    font-size: 30px
+                    cursor: pointer
+    header
+        .menu
+            width: 50%
+            right: -50%
+            height: 100vh
+            position: fixed
+            margin-top: 0px
+            ul
+                flex-direction: column
+                position: relative
+                top: 1px
+                li
+                    a, .span
+                        padding: 18px
+                        display: inline-block
+                        width: 100%
+                        border-bottom: 1px solid $border
+                    .span
+                        display: flex
+                        justify-content: space-between
+                        span
+                            padding-right: 30px
+                    ul
+                        position: relative
+                        display: none
+                        width: 100%
+                        background: $azulprincipal
+                        right: 0
+                        top: 0
+                        flex-direction: column
+                        li
+                            a
+                                padding-right: 0
+                                > span
+                                    padding-right: 30px
+                            ul
+                                width: 100%
+                                position: relative
+                                left: 0
+                                top: 0
+
+    .menu
+        > ul
+            > li
+                > ul
+                    > li
+                        > a, >.span
+                            padding-left: 10%
+                        > ul
+                            > li
+                                > a, >.span
+                                    padding-left: 20%
+
+    main
+        .puntos
+            flex-direction: column
+        p, .listaPolitica
+            line-height: 34px
+
+@media screen and (min-width: 769px)
+    main
+        .jornada
+            .torneo
+                display: flex
+
+@media screen and (max-width: 768px)
+    main
+        .jornada
+            .botonesSiete
+                display: none
+            .botonesSieteResponsive
+                display: flex
+            .torneoResponsive
+                display: flex
+
+@media screen and (max-width: 720px)
+    main
+        .jornada
+            .botonesCuatro
+                display: none
+            .botonesCuatroResponsive
+                display: flex
+        .estadisticas
+            .mvp
+                .ptb
+                    flex-direction: column
+                    .ptbJornada
+                        width: 100%
+                    .ptbExtras
+                        width: 100%
+
+@media screen and (max-width: 690px)
+    header
+        .anclas
+            .anclasMenu
+                ul
+                    .jornadaSmall
+                        display: flex
+                    .jornadaMedium
+                        display: none
+
+@media screen and (max-width: 630px)
+    main
+        .estadisticas
+            .mvp
+                flex-direction: column
+
+@media screen and (max-width: 620px)
+    main
+        .jornada
+            .torneoResponsive
+                .torneoRondaResponsive
+                    flex-direction: column
+                    .torneoColumnResponsive
+                        .torneoBatalla
+                            display: flex
+                            justify-content: space-around
+                            a
+                                width: 120px
+                                font-size: 20px
+                            .torneoResultado
+                                width: 80px
+                                font-size: 20px
+
+@media screen and (max-width: 600px)
+    main
+        .jornada
+            .mcClasificadosSmall
+                display: flex
+            .mcClasificadosMedium
+                display: none
+
+@media screen and (max-width: 660px)
+    footer
+        padding: 20px 0
+        .containerFooter
+            width: 100%
+            flex-direction: column-reverse
+            .informacionFooter
+                width: 90%
+                margin-top: 10px
+                padding: 0
+            .redes-sociales
+                width: 50%
+
+@media screen and (max-width: 550px)
+
+    main
+        .jornada
+            .botonesNormales
+                display: flex
+                flex-direction: column
+                align-items: center
+                .batallas
+                    margin-bottom: 30px
+            .botonesNormalesResponsive
+                display: none
+            .enfrentamientos
+                margin-left: 0
+                .enfren
+                    justify-content: space-around
+                    .frees
+                        flex-direction: column
+                        align-items: center
+                        width: 95px
+                    .enPuntos
+                        font-size: 24px
+                        padding: 10px
+                        margin: 0
+
+@media screen and (max-width: 540px)
+    main
+        .jornada
+            .botonesSeis
+                display: flex
+                flex-direction: column
+                align-items: center
+                .batallas
+                    margin-bottom: 30px
+            .botonesSeisResponsive
+                display: none
+
+@media screen and (max-width: 538px)
+    header
+        .anclas
+            .anclasMenu
+                ul
+                    .jornadaExtraSmall
+                        display: flex
+                    .jornadaSmall
+                        display: none
+
+@media screen and (min-width: 521px)
+    .jornada
+        .enfrentamientos
+            .enfren
+                .frees
+                    width: 150px
+
+@media screen and (max-width: 500px)
+    main
+        h3
+            flex-direction: column
+            .fecha
+                margin-top: 20px
+        .jornada
+            .botonesSieteResponsive
+                display: none
+            .botonesSieteExtra
+                display: flex
+                flex-direction: column
+                align-items: center
+                .batallas
+                    margin-bottom: 30px
+
+@media screen and (max-width: 465px)
+    .menu
+        width: 65%
+
+    main
+        .jornada
+            .table
+                .tableLegend
+                    .tableIcon
+                        flex-direction: column
+                        align-items: center
+            .participantes
+                display: flex
+                flex-direction: column                
+                .parts
+                    display: flex
+                    flex-direction: row
+                    .parts2
+                        width: 100%
+                        display: flex
+                        flex-direction: column
+                        .part
+                            margin-left: 10%
+            .partJurados
+                flex-direction: column                
+                .parts2
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-around
+
+@media screen and (max-width: 430px)
+    main
+        .construccionLista
+            padding-left: 25px
+            flex-direction: column
+
+@media screen and (max-width: 400px)
+    header
+        .menu
+            width: 65%
+            right: -65%
+
+    main
+        .jornada
+            h3
+                .fecha
+                    font-size: 20px
+            .botonesCuatro
+                display: flex
+                flex-direction: column
+                align-items: center
+                .batallas
+                    margin-bottom: 30px
+            .botonesCuatroResponsive
+                display: none
+
+    .votarfms
+        .sectionPrincipal
+            .faseUno
+                .nombresInput
+                    div
+                        flex-direction: column
+                        input
+                            width: 100%
+                            font-size: 20px
+                            padding: 20px
+                            margin-bottom: 15px
+
+    footer
+        .containerFooter
+            .informacionFooter
+                justify-content: space-between
+
+@media screen and (max-width: 720px) and (max-height: 640px)
+    .votarfms
+        // overflow-y: scroll
+        .sectionPrincipal
+            .faseUno
+                .submitFaseUno
+                    margin-bottom: 20px
+
+@media screen and (max-width: 380px)
+
+    header
+        .anclas
+            ul
+                li
+                    a
+                        padding: 11px
+                        padding-top: 10px
+                        padding-bottom: 3px
+
+    main
+        .jornada
+            .torneoResponsive
+                .torneoRondaResponsive
+                    .torneoColumnResponsive
+                        .torneoBatalla
+                            a
+                                width: 100px
+                                font-size: 18px
+                            .torneoResultado
+                                width: 60px
+                                font-size: 18px
+
+@media screen and (max-width: 376px)
+    .votarfms
+    //     overflow-y: scroll
+        .sectionPrincipal
+            .faseUno
+                .submitFaseUno
+                    margin-bottom: 20px
+
+@media screen and (max-width: 360px)
+    main
+        .jornada
+            .enfrentamientos
+                .enfren
+                    justify-content: space-between
+
+    .votarfms
+        .sectionPrincipal
+            h1
+                padding-top: 0
+            .faseUno
+                height: 600px
+
+@media screen and (max-width: 263px)
+    .container-logo-title
+        h1
+            margin-top: 20px
+            font-size: 22px
+
+@media screen and (max-height: 850px)
+    .votarfms
+        .sectionPrincipal
+            h1
+                padding-top: 0
+                padding-bottom: 10px
+            .fases
+                .ronda
+                    .parti
+                        .participacion
+                            .nombreParticipacion
+                                width: 120px
+                                span
+                                    line-height: 60px
+                                    font-size: 14px
+                            .patrones
+                                width: 90%
+                                .patron
+                                    span
+                                        font-size: 14px
+                    .submitFaseDos
+                        input
+                            width: 80px
+                            font-size: 16px
+                            padding: 10px 3px
+                            margin-top: 10px
+                            margin-bottom: 10px
+                            margin-left: 85%
+
+@media screen and (max-height: 750px)
+    .votarfms
+        .sectionPrincipal
+            h1
+                padding-top: 0
+                padding-bottom: 10px
+            .fases
+                .ronda
+                    .parti
+                        .participacion
+                            .nombreParticipacion
+                                width: 120px
+                                span
+                                    line-height: 60px
+                                    font-size: 14px
+                            .patrones
+                                width: 90%
+                                .patron
+                                    span
+                                        font-size: 14px
+                    .submitFaseDos
+                        input
+                            margin-top: 10px
+                            margin-bottom: 10px
+                            margin-left: 85%
+            .contenedorIframe
+                .divIframe
+                    iframe
+                        width: 528px
+                        height: 297px
+
+@media screen and (max-height: 490px)
+    .votarfms
+        .sectionPrincipal
+            .faseUno
+                .urlInput
+                    div
+                        input
+                            padding: 15px
+                .nombresInput
+                    div
+                        input
+                            padding: 15px
+                            margin-bottom: 20px
+                .submitFaseUno
+                    input
+                        padding: 15px
+
+@media screen and (max-height: 460px)
+    .votarfms
+        .sectionPrincipal
+            .faseUno
+                .urlInput
+                    div
+                        input
+                            padding: 10px
+                .nombresInput
+                    div
+                        input
+                            padding: 10px
+                .submitFaseUno
+                    input
+                        padding: 10px
+
+@media screen and (max-height: 420px)
+    .votarfms
+        .sectionPrincipal
+            .faseUno
+                .urlInput
+                    div
+                        input
+                            font-size: 16px
+                .nombresInput
+                    div
+                        input
+                            font-size: 16px
+                .submitFaseUno
+                    input
+                        font-size: 16px
+
+@media screen and (max-width: 340px)
+    footer
+        height: 180px
+        .containerFooter
+            .informacionFooter
+                width: 180px
+                margin: 0 auto
+                flex-direction: column
+                a
+                    margin-top: 5px
+                    text-align: center
+
+// Votar FMS
+
+@media screen and (max-width: 1000px)
+    .votarfms
+        .sectionPrincipal
+            .fases
+                .ronda
+                    .parti
+                        .participacion
+                            .nombreParticipacion
+                                width: 120px
+                                span
+                                    font-size: 14px
+                            .patrones
+                                width: 90%
+                    .submitFaseDos
+                        input
+                            margin-top: 10px
+                            margin-bottom: 10px
+                            margin-left: 85%
+
+@media screen and (max-width: 750px)
+    .votarfms
+        .sectionPrincipal
+            .fases
+                .ronda
+                    .parti
+                        .participacion
+                            .nombreParticipacion
+                                width: 100px
+                                span
+                                    font-size: 14px
+                            .patrones
+                                width: 92%
+                                .patron
+                                    width: 40px
+                                    span
+                                        font-size: 14px
+                                    .patronValor
+                                        font-size: 18px
+
+@media screen and (max-width: 710px), (max-height: 590px)
+    .votarfms
+        // overflow-y: scroll
+        .sectionPrincipal
+            // min-height: 1000px
+            .faseDos
+                padding-top: 40%
+            .fases
+                .ronda
+                    .parti
+                        display: flex
+                        flex-direction: row
+                        .participacion
+                            margin-top: 0
+                            width: 50%
+                            flex-direction: column
+                            .nombreParticipacion
+                                width: 100%
+                                text-align: center
+                                span
+                                    font-size: 20px
+                                    line-height: 40px
+                            .patrones
+                                flex-direction: column
+                                width: 100%
+                                .patron
+                                    width: 100px
+                                    margin: 0 auto
+                                    span
+                                        margin-top: 20px
+                                        font-size: 18px
+                                    .patronValor
+                                        margin-top: 0
+                                        font-size: 22px
+                                    input
+                                        margin-top: 10px
+                    .submitFaseDos
+                        input
+                            margin-top: 20px
+                            margin-left: 42%
+                            &:hover
+                                background: $azulprincipal
+                                color: white
+            .fasesSinVideo
+                margin-top: 0
+            .contenedorIframe
+                top: -75px
+                position: fixed
+                width: 100%
+                .divIframe
+                    overflow: hidden
+                    background: white
+                    position: relative
+                    // padding-bottom: 56.25%
+                    padding-bottom: 52%
+                    padding-top: 40px
+                    height: 0
+                    overflow: hidden
+                    iframe                    
+                        position: absolute
+                        top: 40%
+                        right: 20%
+                        width: 60%
+                        height: 60%
+
+@media screen and (max-width: 600px)
+    .votarfms
+        .sectionPrincipal
+            .contenedorIframe
+                top: 1vh
+                .divIframe
+                    iframe
+                        position: absolute
+                        top: 63px
+                        right: 10%
+                        width: 80%
+                        height: 80%
+
+@media screen and (max-height: 590px) and (orientation: landscape) and (min-width: 436px)
+    .votarfms
+        .sectionPrincipal
+            flex-direction: row-reverse
+            h1
+                width: 100%
+                position: absolute
+            .faseUno
+                width: 100%
+                margin-top: 50px
+            .faseDos
+                padding-top: 10%
+                width: 50%
+            .fases
+                overflow-y: hidden
+                width: 50%
+                margin: 0
+                margin-top: 40px
+                right: 0
+                .ronda
+                    .parti
+                        overflow-y: scroll
+                        height: calc(100vh - 63px - 110px)
+            .contenedorIframe
+                margin-top: 10%
+                position: absolute
+                top: 15%
+                right: 50%
+                bottom: 0
+                height: 100%
+                width: 50%
+                .divIframe
+                    background: none
+                    // height: 100%
+                    iframe
+                        position: absolute
+                        top: 0
+                        bottom: 0
+                        left: 0
+                        width: 100%
+                        height: 100%
+
+@media screen and (max-width: 410px)
+    .votarfms
+        .sectionPrincipal
+            h1
+                margin-top: 10px
+                margin-bottom: 10px
+                text-align: center
+
+@media screen and (max-height: 720px)
+    .votarfms
+        .sectionPrincipal
+            .faseUno
+                max-height: 410px
+
+@media screen and (max-height: 520px) and (orientation: landscape) and (min-width: 720px)
+    .votarfms
+        .sectionPrincipal
+            .faseUno
+                max-height: 250px

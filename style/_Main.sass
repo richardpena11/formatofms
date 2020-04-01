@@ -1,0 +1,721 @@
+main
+    width: 92%
+    min-height: calc(100vh - 63px - 150px)
+    max-width: 1200px
+    background: white
+    padding: 20px 0
+    margin: 0 auto
+    font-family: 'Roboto', sans-serif
+    h1
+        color: $azulprincipal
+        font-size: 28px
+        font-weight: 900
+        display: flex
+        padding: 20px
+        justify-content: center
+    .titulo
+        padding-bottom: 15px
+    .titulo2
+        color: $azulprincipal
+        font-size: 28px
+        display: flex
+        padding: 20px
+        justify-content: center
+        padding-top: 15px
+        font-size: 23px
+        font-weight: 900  
+    p
+        text-align: justify
+        font-size: 18px
+        line-height: 47px
+    h3
+        display: flex
+        justify-content: space-between
+        align-items: center
+        color: $azulprincipal
+        font-size: 25px
+        font-weight: 700
+        .fecha
+            font-size: 24px
+            font-weight: 500
+            color: rgba(0,0,0,0.5)
+        .fechaptb
+            font-size: 20px
+    h4
+        color: $azulprincipal
+        font-size: 22px
+        font-weight: 400
+    .img
+        width: 100%
+        img
+            width: 100%
+        .img80
+            width: 80%
+            margin: auto 10%
+    .puntos
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+    .participantes
+        font-size: 18px
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        .parts
+            display: flex
+            flex-direction: column
+        .part
+            padding: 5px 0px 
+            display: flex
+            align-items: center
+    .partGP
+        font-size: 15px
+        color: $grisoscuro
+    .jornada
+        margin-top: 65px
+        padding-top: 65px 
+        .enfrentamientos
+            margin-left: 25px
+            .enfren
+                margin-top: 10px
+                font-size: 18px 
+                display: flex
+                flex-direction: row
+                .frees
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-between
+                    align-items: center
+                    span
+                        margin-left: 5px
+                .freesInter
+                    width: 80px
+                .enPuntos
+                    font-size: 20px
+                    width: 70px
+                    text-align: center
+                    background: $azulprincipal
+                    color: white
+                    padding: 5px 10px
+                    margin: 0 50px
+                    border-radius: 6px
+            .enfrenFirst
+                margin-top: 0
+            .enfrenAE
+                display: inline-block
+                margin-top: 10px
+                margin-left: -10px
+                font-size: 16px
+            .enfrenGP
+                display: inline-block
+                margin-top: 10px
+                font-size: 15px
+                color: $grisoscuro
+        .torneo
+            width: 100%
+            display: none
+            flex-direction: row
+            justify-content: space-around
+            position: relative
+            .torneoColumn
+                display: flex
+                flex-direction: column
+                .torneoTitle
+                    width: 100px
+                    font-size: 16px
+                    margin-top: 5px
+                    margin-left: 5px
+                    text-decoration: none
+                    text-align: center
+                    color: rgba(0,0,0,.7)
+                .torneoBatalla
+                    margin: 10px 0
+                    display: flex
+                    flex-direction: column
+                    .torneoParticipante
+                        width: 100px
+                        font-size: 18px
+                        padding: 10px 0
+                        margin: 5px
+                        border-radius: 9px
+                        text-decoration: none
+                        text-align: center
+                        color: white
+                        background: $azulprincipal
+            .torneoCuartos
+                justify-content: space-between
+                .torneoBatalla
+                    justify-content: space-around
+                    height: 50%
+            .torneoSemi
+                .torneoBatalla
+                    height: 100%
+                    justify-content: space-around
+            .tercerpuesto
+                position: absolute
+                bottom: 0
+                .torneo3ro4to
+                    margin: 0
+                    padding: 0
+                    display: flex
+                    flex-direction: row
+                .torneo3ro
+                    margin-left: 25%
+            .torneoFinal
+                .torneoBatalla
+                    margin-top: 230px
+                    height: 100%
+            .torneoGanador
+                position: absolute
+                .torneoBatalla
+                    margin: 0 auto
+                    margin-top: 80px
+                    .torneoParticipantes
+                        width: 100px
+                        margin: 0
+                        background: $azulprincipal
+                    .icon-trophy
+                        text-align: center
+                        font-size: 30px
+                        margin-bottom: 10px
+                        // color: $azulprincipal     
+        .torneoResponsive
+            display: none
+            flex-direction: column
+            .torneoTitle
+                font-size: 20px
+                text-align: center
+                margin: 10px 0
+            .torneoRondaResponsive
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                .torneoColumnResponsive
+                    display: flex
+                    flex-direction: column
+                    .torneoBatalla
+                        .torneoParticipante
+                            display: inline-block
+                            width: 100px
+                            font-size: 17px
+                            padding: 10px 0
+                            margin: 2px 0
+                            border-radius: 9px
+                            text-decoration: none
+                            text-align: center
+                            color: black
+                        .torneoResultado
+                            display: inline-block
+                            width: 60px
+                            font-size: 18px
+                            padding: 10px 0
+                            margin: 5px
+                            border-radius: 9px
+                            text-decoration: none
+                            text-align: center
+                            color: white
+                            background: $azulprincipal
+        .curiosidades
+            width: 100%
+            padding: 10px
+            border-radius: 12px 
+            margin-top: 15px 
+            background: rgba(43,128,147,0.9)
+            ul
+                margin-left: 25px
+                margin-top: 5px
+                margin-bottom: 10px
+                li 
+                    color: white
+                    line-height: 27px
+                    font-size: 18px
+                    margin-top: 10px
+        .table
+            width: 100%
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            .row
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                align-items: center
+                padding-top: 10px
+                padding-bottom: 10px 
+                border-bottom: 1px solid rgba(43,128,147,0.4)
+                span
+                    font-size: 18px
+                    width: 255px 
+                    height: 100%
+                .rowLeft
+                    display: flex
+                    flex-direction: row
+                    align-items: center
+                    text-align: left
+                    span
+                        width: 20px 
+                .rowMiddle
+                    max-width: 80px 
+                    text-align: center
+                .rowRight
+                    min-width: 125px 
+                    text-align: right
+                .HeadRight
+                    text-align: center
+            .headTable
+                span
+                    font-weight: 700
+            .tableLegend
+                .tableIcon
+                    display: flex
+                    flex-direction: row
+                    align-items: center
+                    justify-content: space-between
+                    span
+                        font-family: roboto
+                        padding-top: 10px
+                        font-size: 14px
+            .tableLegendResponsive
+                display: none
+                flex-direction: column
+                .tableIcon
+                    display: flex
+                    flex-direction: row
+                    align-items: center
+                    justify-content: space-between
+                    span
+                        font-family: roboto
+                        padding-top: 10px
+                        font-size: 14px
+                .tableMVP
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-around
+                    span
+                        font-family: roboto
+                        padding-top: 10px
+                        font-size: 14px
+        .botonesPlayoff
+            margin-top: 20px
+            margin-bottom: 20px
+            display: flex
+            flex-direction: row
+            .batallas
+                a
+                    padding: 10px
+                    color: $azulprincipal
+                    font-size: 18px
+                    font-weight: 700
+                    text-decoration: none
+                    border: 2px solid $azulprincipal
+                    border-radius: 12px
+                    &:hover
+                        background: $azulprincipal
+                        color: white            
+        .botonesBatallas
+            margin-top: 20px
+            margin-bottom: 0px
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            .batallas
+                a
+                    padding: 10px
+                    color: $azulprincipal
+                    font-size: 18px
+                    font-weight: 700
+                    text-decoration: none
+                    border: 2px solid $azulprincipal
+                    border-radius: 12px
+                    &:hover
+                        background: $azulprincipal
+                        color: white
+        .botonesBatallasResponsive
+            display: none
+            flex-direction: column
+            margin-bottom: 0px
+            .separadorBatallas
+                display: flex
+                flex-direction: row
+                justify-content: space-around
+                .batallas
+                    margin-top: 20px
+                    margin-bottom: 20px
+                    a
+                        padding: 10px
+                        color: $azulprincipal
+                        font-size: 18px
+                        font-weight: 700
+                        text-decoration: none
+                        border: 2px solid $azulprincipal
+                        border-radius: 12px
+                        &:hover
+                            background: $azulprincipal
+                            color: white
+        .botonesSiete
+            display: flex
+        .botonesSieteResponsive
+            display: none
+        .botonesSieteExtra
+            display: none
+        .mvp
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            .ptb
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                .ptbjornada
+                    width: 35%
+                .ptbExtras
+                    width: 65%
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-around
+                    div
+                        margin-left: 20px
+                        width: px
+        .mcClasificados
+            margin-top: 30px
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            .mc
+                padding: 10px 0
+                font-size: 18px
+            .mcColumn
+                display: flex
+                flex-direction: column
+            .mcRow
+                width: 100%
+                display: flex
+                flex-direction: row
+                justify-content: space-around
+        .mcClasificadosSmall, .mcClasificadosLarge
+            display: none
+    .listaPolitica
+        padding: 0 40px
+        text-align: justify
+        font-size: 18px
+        line-height: 47px
+        li
+            a
+                color: $azulprincipal
+    .construccionLista
+        margin-top: 20px
+        margin-bottom: 30px
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        .construccionListaPart
+            display: flex
+            flex-direction: column
+            a
+                font-weight: 700
+                font-size: 18px
+                color: $azulprincipal
+                text-decoration: none
+                padding: 5px
+            span
+                padding: 10px 0
+
+
+.fmsespana
+    padding-top: 123px
+    h1
+        color: $fmsespana
+    .titulo2
+        color: $fmsespana
+    h3
+        color: $fmsespana
+    .jornada    
+        border-top: 3px dashed rgba(219,51,31,0.8)
+        h4
+            color: $fmsespana
+        .enfrentamientos
+            .enfren
+                .enPuntos
+                    background: $fmsespana
+        .curiosidades
+            background: $fmsespana
+        .table
+            .row
+                border-bottom: 1px solid rgba(219,51,31,0.4)
+        .botonesPlayoff
+            .batallas
+                a
+                    color: $fmsespana
+                    border: 2px solid $fmsespana
+                    &:hover
+                        background: $fmsespana
+        .botonesBatallas
+            .batallas
+                a
+                    color: $fmsespana
+                    border: 2px solid $fmsespana
+                    &:hover
+                        background: $fmsespana
+        .botonesBatallasResponsive
+            .separadorBatallas
+                .batallas
+                    a
+                        color: $fmsespana
+                        border: 2px solid $fmsespana
+                        &:hover
+                            background: $fmsespana
+
+.fmsargentina
+    padding-top: 123px
+    h1
+        color: $fmsargentina
+    .titulo2
+        color: $fmsargentina
+    h3
+        color: $fmsargentina
+    .jornada    
+        border-top: 3px dashed rgba(19,149,219,0.8)
+        h4
+            color: $fmsargentina
+        .enfrentamientos
+            .enfren
+                .enPuntos
+                    background: $fmsargentina
+        .curiosidades
+            background: $fmsargentina
+        .table
+            .row
+                border-bottom: 1px solid rgba(19,149,219,0.4)
+        .botonesPlayoff
+            .batallas
+                a
+                    color: $fmsargentina
+                    border: 2px solid $fmsargentina
+                    &:hover
+                        background: $fmsargentina
+        .botonesBatallas
+            .batallas
+                a
+                    color: $fmsargentina
+                    border: 2px solid $fmsargentina
+                    &:hover
+                        background: $fmsargentina
+        .botonesBatallasResponsive
+            .separadorBatallas
+                .batallas
+                    a
+                        color: $fmsargentina
+                        border: 2px solid $fmsargentina
+                        &:hover
+                            background: $fmsargentina
+
+.fmschile
+    padding-top: 123px
+    h1
+        color: $fmschile
+    .titulo2
+        color: $fmschile
+    h3
+        color: $fmschile
+    .jornada    
+        border-top: 3px dashed rgba(31,37,128,0.8)
+        h4
+            color: $fmschile
+        .enfrentamientos
+            .enfren
+                .enPuntos
+                    background: $fmschile
+        .curiosidades
+            background: $fmschile
+        .table
+            .row
+                border-bottom: 1px solid rgba(31,37,128,0.4)
+        .botonesPlayoff
+            .batallas
+                a
+                    color: $fmschile
+                    border: 2px solid $fmschile
+                    &:hover
+                        background: $fmschile
+        .botonesBatallas
+            .batallas
+                a
+                    color: $fmschile
+                    border: 2px solid $fmschile
+                    &:hover
+                        background: $fmschile
+        .botonesBatallasResponsive
+            .separadorBatallas
+                .batallas
+                    a
+                        color: $fmschile
+                        border: 2px solid $fmschile
+                        &:hover
+                            background: $fmschile
+
+.fmsmexico
+    padding-top: 123px
+    h1
+        color: $fmsmexico
+    .titulo2
+        color: $fmsmexico
+    h3
+        color: $fmsmexico
+    .jornada    
+        border-top: 3px dashed rgba(49,133,55,0.8)
+        h4
+            color: $fmsmexico
+        .enfrentamientos
+            .enfren
+                .enPuntos
+                    background: $fmsmexico
+        .curiosidades
+            background: $fmsmexico
+        .table
+            .row
+                border-bottom: 1px solid rgba(49,133,55,0.4)
+        .botonesPlayoff
+            .batallas
+                a
+                    color: $fmsmexico
+                    border: 2px solid $fmsmexico
+                    &:hover
+                        background: $fmsmexico
+        .botonesBatallas
+            .batallas
+                a
+                    color: $fmsmexico
+                    border: 2px solid $fmsmexico
+                    &:hover
+                        background: $fmsmexico
+        .botonesBatallasResponsive
+            .separadorBatallas
+                .batallas
+                    a
+                        color: $fmsmexico
+                        border: 2px solid $fmsmexico
+                        &:hover
+                            background: $fmsmexico
+
+.fmsperu
+    padding-top: 123px
+    h1
+        color: $fmsperu
+    .titulo2
+        color: $fmsperu
+    h3
+        color: $fmsperu
+    .jornada    
+        border-top: 3px dashed rgba(145,2,0,0.8)
+        h4
+            color: $fmsperu
+        .enfrentamientos
+            .enfren
+                .enPuntos
+                    background: $fmsperu
+        .torneo
+            .torneoColumn
+                .torneoBatalla
+                    .torneoParticipante
+                        background: $fmsperu
+            .torneoGanador
+                .torneoBatalla
+                    a
+                        background: $fmsperu
+        .torneoResponsive
+            .torneoRondaResponsive
+                .torneoColumnResponsive
+                    .torneoBatalla
+                        .torneoResultado
+                            background: $fmsperu
+        .curiosidades
+            background: $fmsperu
+        .table
+            .row
+                border-bottom: 1px solid rgba(145,2,0,0.4)
+        .botonesPlayoff
+            .batallas
+                a
+                    color: $fmsperu
+                    border: 2px solid $fmsperu
+                    &:hover
+                        background: $fmsperu
+        .botonesBatallas
+            .batallas
+                a
+                    color: $fmsperu
+                    border: 2px solid $fmsperu
+                    &:hover
+                        background: $fmsperu
+        .botonesBatallasResponsive
+            .separadorBatallas
+                .batallas
+                    a
+                        color: $fmsperu
+                        border: 2px solid $fmsperu
+                        &:hover
+                            background: $fmsperu
+
+.fmsinternacional
+    padding-top: 123px
+    h1
+        color: $fmsinternacional
+    h3
+        color: $fmsinternacional
+    .jornada    
+        border-top: 3px dashed rgba(153,118,10,0.8)
+        h4
+            color: $fmsinternacional
+        .enfrentamientos
+            .enfren
+                .enPuntos
+                    background: $fmsinternacional
+        .curiosidades
+            background: $fmsinternacional
+        .table
+            .row
+                border-bottom: 1px solid rgba(153,118,10,0.4)
+        .botonesPlayoff
+            .batallas
+                a
+                    color: $fmsinternacional
+                    border: 2px solid $fmsinternacional
+                    &:hover
+                        background: $fmsinternacional
+        .botonesBatallas
+            .batallas
+                a
+                    color: $fmsinternacional
+                    border: 2px solid $fmsinternacional
+                    &:hover
+                        background: $fmsinternacional
+        .botonesBatallasResponsive
+            .separadorBatallas
+                .batallas
+                    a
+                        color: $fmsinternacional
+                        border: 2px solid $fmsinternacional
+                        &:hover
+                            background: $fmsinternacional
+        .torneo
+            .torneoColumn
+                .torneoBatalla
+                    .torneoParticipante
+                        width: 80px
+                        background: $fmsinternacional
+            .torneoGanador
+                .torneoBatalla
+                    a
+                        background: $fmsinternacional
+        .torneoResponsive
+            .torneoRondaResponsive
+                .torneoColumnResponsive
+                    .torneoBatalla
+                        .torneoResultado
+                            background: $fmsinternacional
+
+.img-responsive
+    display: none
+
+.fondoMenu
+    cursor: pointer
