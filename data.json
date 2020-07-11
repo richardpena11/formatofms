@@ -1,0 +1,1381 @@
+{
+  "Contenido": {
+    "espana": {
+      "title": "Espana",
+      "link": "/eventos/espana",
+      "img": "https://picsum.photos/1600/900",
+      "temporadas": [
+        {
+          "nombre": "Temporada 1",
+          "date": "2017",
+          "jornadas": [
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T1J1",
+              "next": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Mcklopedia",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Blon",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                },
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                },
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                },
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                },
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ],
+              "tabla": [
+                ["Nombre", "Puntos", "PTB"],
+                ["Sweetpain", 3, 300],
+                ["Jack Adrenalina", 3, 300],
+                ["Lobo Estepario", 3, 300],
+                ["Pepe Grillo", 3, 300],
+                ["Mcklopedia ", 3, 300],
+                ["Jony Beltran", 3, 300],
+                ["Tom Crowley", 3, 300],
+                ["Chuty", 3, 300],
+                ["Chuty", 3, 300]
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "previous": "/eventos/espana/T1J1",
+              "link": "/eventos/espana/T1J2",
+              "next": "/eventos/espana/T1J3",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 3",
+              "previous": "/eventos/espana/T1J2",
+              "link": "/eventos/espana/T1J3",
+              "next": "/eventos/espana/T1J4",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 4",
+              "previous": "/eventos/espana/T1J3",
+              "link": "/eventos/espana/T1J4",
+              "next": "/eventos/espana/T1J5",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 5",
+              "previous": "/eventos/espana/T1J4",
+              "link": "/eventos/espana/T1J5",
+              "next": "/eventos/espana/T1J6",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 6",
+              "previous": "/eventos/espana/T1J5",
+              "link": "/eventos/espana/T1J6",
+              "next": "/eventos/espana/T1J7",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 7",
+              "previous": "/eventos/espana/T1J6",
+              "link": "/eventos/espana/T1J7",
+              "next": "/eventos/espana/T1J8",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 8",
+              "previous": "/eventos/espana/T1J7",
+              "link": "/eventos/espana/T1J8",
+              "next": "/eventos/espana/T1J9",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 9",
+              "previous": "/eventos/espana/T1J8",
+              "link": "/eventos/espana/T1J9",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Temporada 1",
+          "date": "2017",
+          "jornadas": [
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T1J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T1J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T1J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T1J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Temporada 1",
+          "date": "2017",
+          "jornadas": [
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T1J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T1J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T1J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T1J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Temporada 1",
+          "date": "2017",
+          "jornadas": [
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T1J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T1J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T1J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T1J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    "argentina": {
+      "title": "Argentina",
+      "link": "/eventos/argentina",
+      "img": "https://picsum.photos/1600/900",
+      "temporadas": [
+        {
+          "nombre": "Temporada 1",
+          "date": "2017",
+          "jornadas": [
+            {
+              "nombre": "Jornada 5",
+              "link": "/eventos/espana/T1J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Temporada 2",
+          "date": "2018",
+          "jornadas": [
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T2J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T2J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Temporada 2",
+          "date": "2018",
+          "jornadas": [
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T2J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T2J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    "chile": {
+      "title": "Chile",
+      "link": "/eventos/chile",
+      "img": "https://picsum.photos/1600/900",
+      "temporadas": [
+        {
+          "nombre": "Temporada 1",
+          "date": "2017",
+          "jornadas": [
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T1J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Temporada 2",
+          "date": "2018",
+          "jornadas": [
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T2J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T2J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    "mexico": {
+      "title": "Mexico",
+      "link": "/eventos/mexico",
+      "img": "https://picsum.photos/1600/900",
+      "temporadas": [
+        {
+          "nombre": "Temporada 1",
+          "date": "2017",
+          "jornadas": [
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T1J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Temporada 2",
+          "date": "2018",
+          "jornadas": [
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T2J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T2J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    "peru": {
+      "title": "Peru",
+      "link": "/eventos/mexico",
+      "img": "https://picsum.photos/1600/900",
+      "temporadas": [
+        {
+          "nombre": "Temporada 1",
+          "date": "2017",
+          "jornadas": [
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T1J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Temporada 2",
+          "date": "2018",
+          "jornadas": [
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T2J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T2J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    "internacional": {
+      "title": "Internacional",
+      "link": "/eventos/mexico",
+      "img": "https://picsum.photos/1600/900",
+      "temporadas": [
+        {
+          "nombre": "Temporada 1",
+          "date": "2017",
+          "jornadas": [
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T1J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T1J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Temporada 2",
+          "date": "2018",
+          "jornadas": [
+            {
+              "nombre": "Jornada 1",
+              "link": "/eventos/espana/T2J1",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            },
+            {
+              "nombre": "Jornada 2",
+              "link": "/eventos/espana/T2J2",
+              "batallas": [
+                {
+                  "mc1": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 0,
+                    "PTB": 400
+                  },
+                  "mc2": {
+                    "name": "Jack Adrenalina",
+                    "puntos": 3,
+                    "PTB": 400
+                  },
+                  "videoUrl": "https://www.youtube.com/watch?v=04Z205QNfy4"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+
+  "Nav": [
+    {
+      "type": "link",
+      "titulo": "Inicio",
+      "ico": "circle",
+      "link": "/"
+    },
+    {
+      "type": "link",
+      "titulo": "Eventos",
+      "ico": "microphone",
+      "link": "/eventos",
+      "submenu": [
+        {
+          "type": "link",
+          "titulo": "Argentina",
+          "link": "/eventos/argentina"
+        },
+        {
+          "type": "link",
+          "titulo": "Chile",
+          "link": "/eventos/chile"
+        },
+        {
+          "type": "link",
+          "titulo": "España",
+          "link": "/eventos/espana"
+        },
+        {
+          "type": "link",
+          "titulo": "Mexico",
+          "link": "/eventos/mexico"
+        },
+        {
+          "type": "link",
+          "titulo": "Peru",
+          "link": "/eventos/peru"
+        },
+        {
+          "type": "link",
+          "titulo": "Internacional",
+          "link": "/eventos/internacional"
+        }
+      ]
+    },
+    {
+      "type": "link",
+      "titulo": "Votar",
+      "ico": "square",
+      "link": "/votar"
+    },
+    {
+      "type": "action",
+      "titulo": "Tema",
+      "ico": "sun"
+    }
+  ]
+}
