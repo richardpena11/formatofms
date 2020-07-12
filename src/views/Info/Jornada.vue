@@ -1,9 +1,14 @@
 <template>
   <div v-if="info" class="home">
     <Navigation :info="infoJornada" />
-    <div class="jornada">
-      <batallas :info="infoJornada.batallas" />
-      <tabla :info="infoJornada.tabla" />
+    <div class="jornada_container">
+      <h2 class="title">
+        FMS {{ info[pais].title }}: {{ infoJornada.nombre }}
+      </h2>
+      <div class="jornada">
+        <batallas :info="infoJornada.batallas" />
+        <tabla :info="infoJornada.tabla" />
+      </div>
     </div>
   </div>
 </template>
@@ -61,18 +66,28 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.jornada {
+.jornada_container {
   margin: 0 auto;
   width: 95%;
   max-width: 1400px;
   min-height: calc(100vh - 41px);
   padding: 50px 0;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  .title {
+    color: var(--high-contrast-color);
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .jornada {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 900px) {
   .jornada {
     flex-direction: column;
   }

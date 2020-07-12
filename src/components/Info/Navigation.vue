@@ -41,7 +41,7 @@ export default {
     font-size: 18px;
     .btn_action {
       padding: 10px 30px;
-      .btn-link{
+      .btn-link {
         cursor: pointer;
       }
       .icon {

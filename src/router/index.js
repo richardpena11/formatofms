@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Ligas from "../views/Info/Ligas.vue";
 import Temporadas from "../views/Info/Temporadas.vue";
 import Jornada from "../views/Info/Jornada.vue";
+import Votacion from "../views/Votacion/Votacion.vue";
 
 Vue.use(VueRouter);
 
@@ -24,6 +25,11 @@ const routes = [
     path: "/eventos/:pais/:id",
     name: "Jornada",
     component: Jornada
+  },
+  {
+    path: "/votar",
+    name: "Votacion",
+    component: Votacion
   }
 ];
 
