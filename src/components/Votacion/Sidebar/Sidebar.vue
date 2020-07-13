@@ -1,11 +1,27 @@
 <template>
   <aside>
     <div class="action">
-      <div class="action_btn action_votar">Votar</div>
-      <div class="action_btn action_search">Buscador</div>
+      <div
+        :class="
+          `action_btn action_votar ${ sidebarStatus === 'votar' ? 'action_btn-active' : '' }`
+        "
+        @click="changeSidebarStatus('votar')"
+      >
+        Votar
+      </div>
+      <div
+        :class="
+          `action_btn action_search ${
+            sidebarStatus === 'search' ? 'action_btn-active' : ''
+          }`
+        "
+        @click="changeSidebarStatus('search')"
+      >
+        Buscador
+      </div>
     </div>
     <div class="sidebar">
-      <youtube-search />
+      <youtube-search v-if="sidebarStatus === 'search'" />
     </div>
   </aside>
 </template>
@@ -14,6 +30,18 @@
 import YoutubeSearch from "./YoutubeSearch.vue";
 
 export default {
+  data() {
+    return {
+      sidebarStatus: "search"
+    };
+  },
+
+  methods: {
+    changeSidebarStatus(newStatus) {
+      this.sidebarStatus = newStatus;
+    }
+  },
+
   components: {
     YoutubeSearch
   }
@@ -46,6 +74,9 @@ aside {
     .action_search {
       border-left: 1px solid var(--shadow-color);
       border-radius: 0 24px 0 0;
+    }
+    .action_btn-active {
+      background: var(--main-color);
     }
   }
 }
