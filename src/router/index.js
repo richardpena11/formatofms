@@ -30,6 +30,11 @@ const routes = [
     path: "/votar",
     name: "Votacion",
     component: Votacion
+  },
+  {
+    path: "/votar/:videoId",
+    name: "Votacion",
+    component: Votacion
   }
 ];
 

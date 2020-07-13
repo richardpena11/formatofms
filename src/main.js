@@ -13,9 +13,11 @@ import {
   faMoon,
   faChevronRight,
   faChevronLeft,
-  faPlayCircle
+  faPlayCircle,
+  faSearch
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import VueYoutube from "vue-youtube";
 
 library.add(
   faMicrophone,
@@ -25,7 +27,8 @@ library.add(
   faMoon,
   faChevronRight,
   faChevronLeft,
-  faPlayCircle
+  faPlayCircle,
+  faSearch
 );
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
@@ -33,6 +36,8 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.config.productionTip = false;
 
 Vue.use(VueResource);
+
+Vue.use(VueYoutube);
 
 new Vue({
   router,

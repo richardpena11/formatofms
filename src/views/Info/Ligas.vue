@@ -36,6 +36,7 @@ export default {
     justify-content: space-around;
     flex-wrap: wrap;
     .ligas-card {
+      text-decoration: none;
       width: 400px;
       margin: 20px;
       .img {
