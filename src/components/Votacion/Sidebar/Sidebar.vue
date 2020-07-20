@@ -21,18 +21,20 @@
       </div>
     </div>
     <div class="sidebar">
-      <youtube-search v-if="sidebarStatus === 'search'" />
+      <youtube-search class="sidebar-content" v-if="sidebarStatus === 'search'" />
+      <votacion class="sidebar-content" v-if="sidebarStatus === 'votar'" />
     </div>
   </aside>
 </template>
 
 <script>
-import YoutubeSearch from "./YoutubeSearch.vue";
+import YoutubeSearch from "./Search/YoutubeSearch.vue";
+import votacion from "./Votacion/Votacion.vue";
 
 export default {
   data() {
     return {
-      sidebarStatus: "search"
+      sidebarStatus: "votar"
     };
   },
 
@@ -43,7 +45,8 @@ export default {
   },
 
   components: {
-    YoutubeSearch
+    YoutubeSearch,
+    votacion
   }
 };
 </script>
@@ -66,17 +69,27 @@ aside {
       text-align: center;
       &:hover {
         background: var(--main-color);
+        color: #fff;
       }
     }
     .action_votar {
       border-radius: 24px 0 0 0;
     }
     .action_search {
-      border-left: 1px solid var(--shadow-color);
+      border-left: 1px solid var(--low-contrast-color);
       border-radius: 0 24px 0 0;
     }
     .action_btn-active {
       background: var(--main-color);
+      color: #fff;
+    }
+  }
+  .sidebar {
+    .sidebar-content {
+      height: 100%;
+      padding: 20px 15px;
+      display: flex;
+      flex-direction: column;
     }
   }
 }

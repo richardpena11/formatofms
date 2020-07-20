@@ -1377,5 +1377,442 @@
       "titulo": "Tema",
       "ico": "sun"
     }
-  ]
+  ],
+
+  "Freestylers": [
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Aczino",
+    "Chile"
+  ],
+
+  "Formatos": {
+    "fms2020": {
+      "name": "FMS 2020",
+      "value": "fms2020",
+      "patrones": {
+        "name": "Patron",
+        "minValue": 0,
+        "maxValue": 4,
+        "rangeValue": 0.5
+      },
+      "patronesExtra": [
+        {
+          "name": "Skill",
+          "minValue": 0,
+          "maxValue": 2,
+          "rangeValue": 0.5
+        },
+        {
+          "name": "Flow",
+          "minValue": 0,
+          "maxValue": 2,
+          "rangeValue": 0.5
+        },
+        {
+          "name": "Escena",
+          "minValue": 0,
+          "maxValue": 2,
+          "rangeValue": 0.5
+        }
+      ],
+      "maxReplica": 5,
+      "rondas": [
+        "easy",
+        "hard",
+        "random",
+        "tematicas1",
+        "tematicas2",
+        "personajes",
+        "minutos1",
+        "minutos2",
+        "deluxe"
+      ]
+    },
+    "fms2018": {
+      "name": "FMS 2018 - 2019",
+      "value": "fms2018",
+      "patrones": {
+        "name": "Patron",
+        "minValue": 0,
+        "maxValue": 4,
+        "rangeValue": 1
+      },
+      "patronesExtra": [
+        {
+          "name": "Skill",
+          "minValue": 0,
+          "maxValue": 2,
+          "rangeValue": 1
+        },
+        {
+          "name": "Flow",
+          "minValue": 0,
+          "maxValue": 2,
+          "rangeValue": 1
+        },
+        {
+          "name": "Escena",
+          "minValue": 0,
+          "maxValue": 2,
+          "rangeValue": 1
+        }
+      ],
+      "maxReplica": 5,
+      "rondas": [
+        "easy",
+        "hard",
+        "personajes",
+        "tematicas1",
+        "tematicas2",
+        "personajes",
+        "minutos1",
+        "minutos2",
+        "deluxe"
+      ]
+    },
+    "octavosInter2020": {
+      "name": "Octavos: Inter 2020",
+      "value": "octavosInter2020",
+      "patrones": {
+        "name": "Patron",
+        "minValue": 0,
+        "maxValue": 4,
+        "rangeValue": 1
+      },
+      "patronesExtra": [
+        {
+          "name": "Skill",
+          "minValue": 0,
+          "maxValue": 2,
+          "rangeValue": 1
+        },
+        {
+          "name": "Flow",
+          "minValue": 0,
+          "maxValue": 2,
+          "rangeValue": 1
+        },
+        {
+          "name": "Escena",
+          "minValue": 0,
+          "maxValue": 2,
+          "rangeValue": 1
+        }
+      ],
+      "maxReplica": 2,
+      "rondas": [
+        "easy",
+        "tematicas1",
+        "tematicas2",
+        "deluxe"
+      ]
+    },
+    "cuartosInter2020": {
+      "name": "Cuartos: Inter 2020",
+      "value": "cuartosInter2020",
+      "patrones": {
+        "name": "Patron",
+        "minValue": 0,
+        "maxValue": 4,
+        "rangeValue": 1
+      },
+      "patronesExtra": [
+        {
+          "name": "Skill",
+          "minValue": 0,
+          "maxValue": 2,
+          "rangeValue": 1
+        },
+        {
+          "name": "Flow",
+          "minValue": 0,
+          "maxValue": 2,
+          "rangeValue": 1
+        },
+        {
+          "name": "Escena",
+          "minValue": 0,
+          "maxValue": 2,
+          "rangeValue": 1
+        }
+      ],
+      "maxReplica": 2,
+      "rondas": [
+        "hard",
+        "random",
+        "minutos1",
+        "minutos2"
+      ]
+    },
+    "semisInter2020": {
+      "name": "Semis: Inter 2020",
+      "value": "semisInter2020",
+      "patrones": {
+        "name": "Patron",
+        "minValue": 0,
+        "maxValue": 4,
+        "rangeValue": 1
+      },
+      "patronesExtra": [
+        {
+          "name": "Skill",
+          "minValue": 0,
+          "maxValue": 2,
+          "rangeValue": 1
+        },
+        {
+          "name": "Flow",
+          "minValue": 0,
+          "maxValue": 2,
+          "rangeValue": 1
+        },
+        {
+          "name": "Escena",
+          "minValue": 0,
+          "maxValue": 2,
+          "rangeValue": 1
+        }
+      ],
+      "maxReplica": 2,
+      "rondas": [
+        "hard",
+        "extreme",
+        "minutos1",
+        "minutos2",
+        "deluxe"
+      ]
+    },
+    "personalizado": {
+      "name": "Personalizado",
+      "value": "personalizado",
+      "patrones": {
+        "name": "Patron",
+        "minValue": 0,
+        "maxValue": 4,
+        "rangeValue": 0.5
+      },
+      "patronesExtra": [
+        {
+          "name": "Skill",
+          "minValue": 0,
+          "maxValue": 2,
+          "rangeValue": 0.5
+        },
+        {
+          "name": "Flow",
+          "minValue": 0,
+          "maxValue": 2,
+          "rangeValue": 0.5
+        },
+        {
+          "name": "Escena",
+          "minValue": 0,
+          "maxValue": 2,
+          "rangeValue": 0.5
+        }
+      ],
+      "maxReplica": 5,
+      "rondas": null
+    }
+  },
+
+  "Rondas": {
+    "easy": {
+      "name": "EasyMode",
+      "value": "easy",
+      "patrones": 6,
+      "freestyler1": {
+        "puntoExtra": false
+      },
+      "freestyler2": {
+        "puntoExtra": false
+      }
+    },
+
+    "hard": {
+      "name": "HardMode",
+      "value": "hard",
+      "patrones": 6,
+      "freestyler1": {
+        "puntoExtra": false
+      },
+      "freestyler2": {
+        "puntoExtra": false
+      }
+    },
+
+    "extreme": {
+      "name": "ExtremeMode",
+      "value": "extreme",
+      "patrones": 6,
+      "freestyler1": {
+        "puntoExtra": false
+      },
+      "freestyler2": {
+        "puntoExtra": false
+      }
+    },
+
+    "tematicas1": {
+      "name": "Tematicas (1)",
+      "value": "tematicas1",
+      "patrones": 4,
+      "freestyler1": {
+        "puntoExtra": false
+      },
+      "freestyler2": {
+        "puntoExtra": false
+      }
+    },
+
+    "tematicas2": {
+      "name": "Tematicas (2)",
+      "value": "tematicas2",
+      "patrones": 4,
+      "freestyler1": {
+        "puntoExtra": false
+      },
+      "freestyler2": {
+        "puntoExtra": false
+      }
+    },
+
+    "personajes": {
+      "name": "Personajes",
+      "value": "personajes",
+      "patrones": 6,
+      "freestyler1": {
+        "puntoExtra": true
+      },
+      "freestyler2": {
+        "puntoExtra": true
+      }
+    },
+
+    "random": {
+      "name": "Random",
+      "value": "random",
+      "patrones": 8,
+      "freestyler1": {
+        "puntoExtra": true
+      },
+      "freestyler2": {
+        "puntoExtra": true
+      }
+    },
+
+    "minutos1": {
+      "name": "Minutos (1)",
+      "value": "minutos1",
+      "patrones": 6,
+      "freestyler1": {
+        "puntoExtra": false
+      },
+      "freestyler2": {
+        "puntoExtra": true
+      }
+    },
+
+    "minutos2": {
+      "name": "Minutos (2)",
+      "value": "minutos2",
+      "patrones": 6,
+      "freestyler1": {
+        "puntoExtra": true
+      },
+      "freestyler2": {
+        "puntoExtra": false
+      }
+    },
+
+    "deluxe": {
+      "name": "Deluxe",
+      "value": "deluxe",
+      "patrones": 11,
+      "freestyler1": {
+        "puntoExtra": false
+      },
+      "freestyler2": {
+        "puntoExtra": false
+      }
+    }
+  }
 }

@@ -1,12 +1,12 @@
 <template>
-  <div class="votacion">
+  <div class="votar">
     <youtube-player class="youtube-player" :videoId="videoId" />
     <sidebar class="sidebar" />
   </div>
 </template>
 
 <script>
-import YoutubePlayer from "../../components/Votacion/Youtube.vue";
+import YoutubePlayer from "../../components/Votacion/Player/Youtube.vue";
 import Sidebar from "../../components/Votacion/Sidebar/Sidebar.vue";
 
 export default {
@@ -34,23 +34,22 @@ export default {
 </script>
 
 <style lang="scss">
-.votacion {
+.votar {
+  overflow-y: hidden;
   height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-.youtube-player {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  height: 90%;
-}
-
-.sidebar {
-  width: 450px;
-  height: 90%;
+  .youtube-player {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 90%;
+  }
+  .sidebar {
+    width: 400px;
+    height: 90%;
+  }
 }
 </style>

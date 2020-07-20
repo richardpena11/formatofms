@@ -75,10 +75,6 @@ export default {
 
 <style lang="scss">
 .search {
-  height: 100%;
-  padding: 20px 15px;
-  display: flex;
-  flex-direction: column;
   .search-box {
     display: flex;
     border: 2px solid var(--low-contrast-color);
@@ -122,7 +118,6 @@ export default {
   }
   .search-result {
     width: 100%;
-    height: 90%;
     margin-top: 10px;
     color: var(--high-contrast-color);
     overflow-y: scroll;
@@ -173,6 +168,7 @@ export default {
     align-items: center;
     text-align: center;
     height: 100%;
+    color: var(--high-contrast-color);
     .icon {
       font-size: 64px;
       margin-bottom: 20px;
