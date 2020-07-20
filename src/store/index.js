@@ -10,7 +10,7 @@ export default new Vuex.Store({
     formatoActual: "fms2020",
     freestyler1: "Freestyler 1",
     freestyler2: "Freestyler 2",
-    total: null
+    total: new Object()
   },
   mutations: {
     updatedformatoActual(state, payload) {
@@ -35,6 +35,27 @@ export default new Vuex.Store({
 
     updatedTotalRuta(state, payload) {
       state.total = payload;
+    },
+
+    addPatrones(state, payload) {
+
+      if (!state.total[payload.name]) {
+        state.total[payload.name] = new Object();
+      }
+      if (!state.total[payload.name][payload.ronda]) {
+        state.total[payload.name][payload.ronda] = new Object();
+      }
+      if (!state.total[payload.name][payload.ronda].patrones) {
+        state.total[payload.name][payload.ronda].patrones = new Array();
+      }
+      state.total[payload.name][payload.ronda].patrones.push(payload.value);
+    },
+
+    addPatronesTotal(state, payload) {
+      const reducer = (acc, cur) => parseInt(acc) + parseInt(cur);
+      const patrones = state.total[payload.name][payload.ronda].patrones;
+      state.total[payload.name][payload.ronda].total = patrones.reduce(reducer);
+      state.total[payload.name][payload.ronda].name = payload.ronda;
     }
   },
   actions: {},

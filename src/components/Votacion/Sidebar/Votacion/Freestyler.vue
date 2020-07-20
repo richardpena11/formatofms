@@ -3,7 +3,7 @@
     <div class="frestyler-name">
       {{ nombre }}
     </div>
-    <div class="puntos">
+    <div class="puntos" ref="patrones">
       <patron
         v-for="index in contidadPatrones"
         :key="`patron ${index}`"
@@ -23,16 +23,31 @@ import { mapMutations } from "vuex";
 import Patron from "./Patron.vue";
 
 export default {
-  props: ["nombre", "contidadPatrones", "patrones", "patronesExtra"],
+  props: ["nombre", "contidadPatrones", "patrones", "patronesExtra", "ronda"],
 
   components: { Patron },
 
   methods: {
-    ...mapMutations(["updatedTotalRuta"])
+    ...mapMutations(["updatedTotalRuta", "addPatrones", "addPatronesTotal"])
   },
 
-  created() {
-    this.updatedTotalRuta("jeje");
+  beforeDestroy() {
+    const inputArr = Array.from(
+      this.$refs.patrones.querySelectorAll('input[type="range"]')
+    );
+
+    for (const input of inputArr) {
+      this.addPatrones({
+        value: input.value,
+        name: this.nombre,
+        ronda: this.ronda
+      });
+    }
+
+    this.addPatronesTotal({
+      name: this.nombre,
+      ronda: this.ronda
+    });
   }
 };
 </script>

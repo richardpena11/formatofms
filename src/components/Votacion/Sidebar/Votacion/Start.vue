@@ -120,6 +120,7 @@ export default {
 
 <style lang="scss">
 .setup {
+  height: 100%;
   overflow-y: scroll;
   .input {
     display: flex;
