@@ -36,6 +36,7 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.config.productionTip = false;
 
 Vue.use(VueResource);
+Vue.http.options.root = "https://formato-fms-e1513.firebaseio.com/";
 
 Vue.use(VueYoutube);
 

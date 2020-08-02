@@ -43,7 +43,7 @@ export default {
   methods: {
     fetchData() {
       this.$http
-        .get("http://localhost:3004/Nav")
+        .get("Nav.json")
         .then(response => response.json())
         .then(data => (this.nav = data))
         .catch(err => console.error(err));

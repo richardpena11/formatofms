@@ -1,43 +1,26 @@
 <template>
-  <div class="resultado">
-    <div class="freestyler-name">
-      {{ name }}
-    </div>
-    <div class="freestyler-info">
-      <div class="resultados" v-for="(ronda, index) in total" :key="index">
-        <div class="title">{{ ronda.name }}</div>
-        <div class="puntos">{{ ronda.total }}</div>
-      </div>
+  <div class="ronda">
+    <div class="ronda-title">Resultados</div>
+    <div class="freestylers">
+      <FreestylerResultado :name="freestyler1" :total="total[freestyler1]" />
+
+      <FreestylerResultado :name="freestyler2" :total="total[freestyler2]" />
     </div>
   </div>
 </template>
 
 <script>
+import FreestylerResultado from "./Freestyler_resultado.vue";
+
 export default {
-  props: ["name", "total"]
-};
+  props: ["freestyler1", "freestyler2", "total"],
+
+  components: {
+    FreestylerResultado
+  }
+}
 </script>
 
 <style lang="scss">
-.resultado {
-  .freestyler-name {
-    color: var(--high-contrast-color);
-    font-size: 24px;
-    font-weight: bold;
-  }
-  .freestyler-info {
-    color: var(--high-contrast-color);
-    .resultados {
-      margin: 20px 0px;
-      text-align: center;
-      .title {
-        font-size: 22px;
-      }
-      .puntos {
-        font-size: 40px;
-        font-weight: bold;
-      }
-    }
-  }
-}
+
 </style>

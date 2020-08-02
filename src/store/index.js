@@ -3,16 +3,25 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {
+const defaultState = () => {
+  return {
     rondaActual: "setup",
     ruta: null,
     formatoActual: "fms2020",
     freestyler1: "Freestyler 1",
     freestyler2: "Freestyler 2",
-    total: new Object()
-  },
+    total: new Object(),
+    readyResultado: false
+  };
+};
+
+export default new Vuex.Store({
+  state: defaultState,
   mutations: {
+    resetVotacion(state) {
+      Object.assign(state, defaultState());
+    },
+
     updatedformatoActual(state, payload) {
       state.formatoActual = payload;
     },
@@ -38,7 +47,6 @@ export default new Vuex.Store({
     },
 
     addPatrones(state, payload) {
-
       if (!state.total[payload.name]) {
         state.total[payload.name] = new Object();
       }
@@ -56,6 +64,10 @@ export default new Vuex.Store({
       const patrones = state.total[payload.name][payload.ronda].patrones;
       state.total[payload.name][payload.ronda].total = patrones.reduce(reducer);
       state.total[payload.name][payload.ronda].name = payload.ronda;
+    },
+
+    readyRenderResultados(state) {
+      state.readyResultado = true;
     }
   },
   actions: {},

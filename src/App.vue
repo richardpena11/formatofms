@@ -24,7 +24,7 @@ export default {
   methods: {
     fetchData() {
       this.$http
-        .get("http://localhost:3004/Contenido")
+        .get("Contenido.json")
         .then(response => response.json())
         .then(data => (this.info = data))
         .catch(err => console.error(err));

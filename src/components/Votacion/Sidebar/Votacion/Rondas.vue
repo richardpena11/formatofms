@@ -25,14 +25,7 @@
         <button @click="nextRonda">Siguiente</button>
       </div>
     </div>
-    <div class="ronda" v-else>
-      <div class="ronda-title">Resultados</div>
-      <div class="freestylers">
-        <resultado :name="freestyler1" :total="total[freestyler1]" />
-
-        <resultado :name="freestyler2" :total="total[freestyler2]" />
-      </div>
-    </div>
+    <resultado :freestyler1="freestyler1" :freestyler2="freestyler2" :total="total" v-else />
   </div>
 </template>
 

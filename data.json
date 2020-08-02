@@ -1497,10 +1497,9 @@
       "rondas": [
         "easy",
         "hard",
-        "random",
         "tematicas1",
         "tematicas2",
-        "personajes",
+        "random",
         "minutos1",
         "minutos2",
         "deluxe"

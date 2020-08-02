@@ -1,6 +1,6 @@
 <template>
   <div class="votar">
-    <youtube-player class="youtube-player" :videoId="videoId" />
+    <youtube-player :videoId="videoId" />
     <sidebar class="sidebar" />
   </div>
 </template>
@@ -40,13 +40,6 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  .youtube-player {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    height: 90%;
-  }
   .sidebar {
     width: 400px;
     height: 90%;

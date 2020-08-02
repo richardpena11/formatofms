@@ -28,7 +28,7 @@ export default {
   components: { Patron },
 
   methods: {
-    ...mapMutations(["updatedTotalRuta", "addPatrones", "addPatronesTotal"])
+    ...mapMutations(["addPatrones", "addPatronesTotal"])
   },
 
   beforeDestroy() {

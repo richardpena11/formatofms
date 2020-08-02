@@ -14,6 +14,8 @@
 import Start from "./Start.vue";
 import Rondas from "./Rondas.vue";
 
+import { mapMutations } from "vuex";
+
 export default {
   data() {
     return {
@@ -31,19 +33,21 @@ export default {
   },
 
   methods: {
+    ...mapMutations(["resetVotacion"]),
+
     fetchData() {
       this.$http
-        .get("http://localhost:3004/Formatos")
+        .get("Formatos.json")
         .then(response => response.json())
         .then(data => (this.formatos = data))
         .catch(err => console.error(err));
       this.$http
-        .get("http://localhost:3004/Freestylers")
+        .get("Freestylers.json")
         .then(response => response.json())
         .then(data => (this.freestylers = data))
         .catch(err => console.error(err));
       this.$http
-        .get("http://localhost:3004/Rondas")
+        .get("Rondas.json")
         .then(response => response.json())
         .then(data => (this.rondas = data))
         .catch(err => console.error(err));
@@ -52,6 +56,7 @@ export default {
 
   created() {
     this.fetchData();
+    this.resetVotacion();
   },
 
   components: {
