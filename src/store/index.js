@@ -10,8 +10,8 @@ const defaultState = () => {
     formatoActual: "fms2020",
     freestyler1: "Freestyler 1",
     freestyler2: "Freestyler 2",
-    total: new Object(),
-    readyResultado: false
+    patronesDetalles: null,
+    total: new Object()
   };
 };
 
@@ -42,6 +42,10 @@ export default new Vuex.Store({
       state.freestyler2 = payload;
     },
 
+    updatedpatronesDetalles(state, payload) {
+      state.patronesDetalles = payload;
+    },
+
     updatedTotalRuta(state, payload) {
       state.total = payload;
     },
@@ -60,10 +64,24 @@ export default new Vuex.Store({
     },
 
     addPatronesTotal(state, payload) {
-      const reducer = (acc, cur) => parseInt(acc) + parseInt(cur);
+      const reducer = (acc, cur) => parseFloat(acc) + parseFloat(cur);
       const patrones = state.total[payload.name][payload.ronda].patrones;
       state.total[payload.name][payload.ronda].total = patrones.reduce(reducer);
       state.total[payload.name][payload.ronda].name = payload.ronda;
+    },
+
+    calculateTotal(state, payload) {
+      const totalArr = [];
+
+      for (const ronda of state.ruta) {
+        const totalRonda = state.total[payload][ronda];
+        if (totalRonda) {
+          totalArr.push(totalRonda.total);
+        }
+      }
+
+      const total = totalArr.reduce((acc, cur) => acc + cur);
+      state.total[payload].total = { name: "total", total };
     },
 
     readyRenderResultados(state) {

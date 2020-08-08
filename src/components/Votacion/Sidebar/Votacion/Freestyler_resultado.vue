@@ -13,8 +13,24 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
+
 export default {
-  props: ["name", "total"],
+  props: ["name"],
+
+  methods: {
+    ...mapMutations(["calculateTotal"])
+  },
+
+  computed: {
+    total() {
+      return this.$store.state.total[this.name];
+    }
+  },
+
+  created() {
+    this.calculateTotal(this.name);
+  }
 };
 </script>
 

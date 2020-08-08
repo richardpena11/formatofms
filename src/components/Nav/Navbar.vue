@@ -1,7 +1,11 @@
 <template>
   <div class="nav">
     <div class="item" v-for="(item, index) in nav" :key="index">
-      <router-link v-if="item.type === 'link'" class="link" :to="item.link">
+      <router-link
+        v-if="item.type === 'link'"
+        :class="`link ${currentPage.includes(item.link) ? 'link--active' : ''}`"
+        :to="item.link"
+      >
         <font-awesome-icon class="icon" :icon="item.ico" />
         <span class="title"> {{ item.titulo }} </span>
       </router-link>
@@ -17,9 +21,9 @@
 
       <div class="subitem" v-if="item.submenu">
         <router-link
-          class="subitem-link"
           v-for="(subitem, index) in item.submenu"
           :key="index"
+          class="subitem-link"
           :to="subitem.link"
         >
           <font-awesome-icon class="icon" icon="chevron-right" />
@@ -38,6 +42,13 @@ export default {
       nav: null,
       theme: "sun"
     };
+  },
+
+  computed: {
+    currentPage() {
+      console.log(this.$route);
+      return this.$route.path;
+    }
   },
 
   methods: {
@@ -102,6 +113,10 @@ export default {
       transition: background-color 200ms;
 
       &:hover {
+        background: var(--main-color);
+      }
+
+      &--active {
         background: var(--main-color);
       }
 

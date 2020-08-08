@@ -7,16 +7,16 @@
         <freestyler
           :nombre="freestyler1"
           :contidadPatrones="rondas[ronda].patrones"
-          :patrones="formatos[formatoActual].patrones"
-          :patronesExtra="formatos[formatoActual].patronesExtra"
+          :patrones="patronesDetalles.patrones"
+          :patronesExtra="patronesDetalles.patronesExtra"
           :ronda="ronda"
         />
 
         <freestyler
           :nombre="freestyler2"
           :contidadPatrones="rondas[ronda].patrones"
-          :patrones="formatos[formatoActual].patrones"
-          :patronesExtra="formatos[formatoActual].patronesExtra"
+          :patrones="patronesDetalles.patrones"
+          :patronesExtra="patronesDetalles.patronesExtra"
           :ronda="ronda"
         />
       </div>
@@ -25,7 +25,7 @@
         <button @click="nextRonda">Siguiente</button>
       </div>
     </div>
-    <resultado :freestyler1="freestyler1" :freestyler2="freestyler2" :total="total" v-else />
+    <resultado :freestyler1="freestyler1" :freestyler2="freestyler2" v-else />
   </div>
 </template>
 
@@ -74,16 +74,28 @@ export default {
       return this.$store.state.formatoActual;
     },
 
+    patronesDetalles() {
+      const patronesDetalles = this.$store.state.patronesDetalles;
+      if (patronesDetalles) {
+        console.log(patronesDetalles);
+        return patronesDetalles;
+      }
+      console.log({
+        patrones: this.formatos[this.formatoActual].patrones,
+        patronesExtra: this.formatos[this.formatoActual].patronesExtra
+      });
+      return {
+        patrones: this.formatos[this.formatoActual].patrones,
+        patronesExtra: this.formatos[this.formatoActual].patronesExtra
+      };
+    },
+
     freestyler1() {
       return this.$store.state.freestyler1;
     },
 
     freestyler2() {
       return this.$store.state.freestyler2;
-    },
-
-    total() {
-      return this.$store.state.total;
     }
   },
 

@@ -8,6 +8,7 @@
         v-for="index in contidadPatrones"
         :key="`patron ${index}`"
         :info="patrones"
+        :hasPuntoExtra="hasPuntoExtra"
       />
       <patron
         v-for="(patronExtra, index) in patronesExtra"
@@ -23,7 +24,14 @@ import { mapMutations } from "vuex";
 import Patron from "./Patron.vue";
 
 export default {
-  props: ["nombre", "contidadPatrones", "patrones", "patronesExtra", "ronda"],
+  props: [
+    "nombre",
+    "contidadPatrones",
+    "hasPuntoExtra",
+    "patrones",
+    "patronesExtra",
+    "ronda"
+  ],
 
   components: { Patron },
 
@@ -32,13 +40,36 @@ export default {
   },
 
   beforeDestroy() {
-    const inputArr = Array.from(
+    const inputPatrones = Array.from(
       this.$refs.patrones.querySelectorAll('input[type="range"]')
     );
 
-    for (const input of inputArr) {
+    const inputExtra = Array.from(
+      this.$refs.patrones.querySelectorAll('input[type="checkbox"]')
+    );
+
+    const inputPatronesValue = [];
+    const inputExtraValue = [];
+
+    for (const input of inputPatrones) {
+      inputPatronesValue.push(input.value);
+    }
+
+    for (const input of inputExtra) {
+      let value;
+      if (input.checked) {
+        value = 1;
+      } else {
+        value = 0;
+      }
+      inputExtraValue.push(value);
+    }
+
+    const inputValue = [...inputPatronesValue, ...inputExtraValue];
+
+    for (const value of inputValue) {
       this.addPatrones({
-        value: input.value,
+        value: value,
         name: this.nombre,
         ronda: this.ronda
       });

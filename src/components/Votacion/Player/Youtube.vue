@@ -2,8 +2,7 @@
   <div class="youtube">
     <youtube
       class="youtube-player"
-      v-if="videoId"
-      :video-id="videoId"
+      :video-id="videoId ? videoId : videoPreview"
       :resizeDelay="0"
       :resize="true"
       :fitParent="true"
@@ -29,7 +28,8 @@
 export default {
   data() {
     return {
-      videoInfo: null
+      videoInfo: null,
+      videoPreview: "mNJz5L6wbCg"
     };
   },
 
@@ -38,14 +38,21 @@ export default {
   computed: {
     dataFixed() {
       const oldDate = this.videoInfo.publishedAt;
-      const newDate = this.fixingDate(oldDate)
+      const newDate = this.fixingDate(oldDate);
       return newDate;
     }
   },
 
   methods: {
     getVideoInfo() {
-      const videoId = this.$route.params.videoId;
+      let videoId;
+
+      if (this.videoInfo) {
+        videoId = this.$route.params.videoId;
+      } else {
+        videoId = this.videoPreview;
+      }
+
       const key = "AIzaSyDXiKRSPaCmmkkSlrHpc941T9zo2wrTYK0";
 
       const apiUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=${videoId}&key=${key}`;
@@ -69,6 +76,12 @@ export default {
 
   created() {
     this.getVideoInfo();
+  },
+
+  watch: {
+    $route() {
+      this.getVideoInfo();
+    }
   }
 };
 </script>
