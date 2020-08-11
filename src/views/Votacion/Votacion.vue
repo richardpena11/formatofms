@@ -1,7 +1,7 @@
 <template>
   <div class="votar">
-    <youtube-player :videoId="videoId" />
-    <sidebar class="sidebar" />
+    <youtube-player :videoId="videoId" class="youtube-container" />
+    <sidebar class="sidebar-container" />
   </div>
 </template>
 
@@ -35,14 +35,33 @@ export default {
 
 <style lang="scss">
 .votar {
-  overflow-y: hidden;
+  padding: 0px 20px;
+  overflow-y: auto;
   height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  .sidebar {
-    width: 400px;
-    height: 90%;
+  .sidebar-container {
+    width: 450px;
+    height: 95%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .votar {
+    flex-direction: column;
+    .sidebar-container {
+      height: 50vh;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .votar {
+    padding-bottom: 80px;
+    .sidebar-container {
+      width: 100%;
+    }
   }
 }
 </style>

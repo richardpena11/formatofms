@@ -140,8 +140,8 @@ export default {
       }
     }
     .video {
-      width: 42%;
-      margin-bottom: 30px;
+      width: 90%;
+      margin-bottom: 15px;
       text-decoration: none;
       .thumbnail {
         img {
@@ -151,9 +151,12 @@ export default {
       .info {
         .title {
           color: var(--high-contrast-color);
+          text-align: center;
           margin-top: 7px;
         }
         .channel {
+          font-size: 15px;
+          font-weight: bold;
           margin-top: 5px;
           color: var(--low-contrast-color);
           text-align: center;
@@ -167,6 +170,7 @@ export default {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 50px 0;
     height: 100%;
     color: var(--high-contrast-color);
     .icon {

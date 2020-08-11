@@ -88,10 +88,13 @@ export default {
 
 <style lang="scss">
 .youtube {
-  width: 70%;
+  max-width: 1440px;
+  width: 100%;
+  margin-right: 10px;
   display: flex;
   flex-direction: column;
   &-player {
+    width: 100%;
     border: 2px solid var(--low-contrast-color);
   }
   &-info {
@@ -119,6 +122,23 @@ export default {
         padding-bottom: 15px;
       }
     }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .youtube {
+    flex-direction: column-reverse;
+    margin-bottom: 10px;
+    width: 70%;
+    &-info {
+      border-radius: 12px 12px 0 0;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .youtube {
+    width: 100%;
   }
 }
 </style>

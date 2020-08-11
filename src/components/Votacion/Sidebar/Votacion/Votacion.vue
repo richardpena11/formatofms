@@ -66,4 +66,23 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.votacion {
+  > div {
+    &::-webkit-scrollbar {
+      border-radius: 12px;
+      width: 12px;
+      background: var(--pure-color);
+      border: 2px solid var(--high-contrast-color);
+      opacity: 0.2;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 12px;
+      background: var(--low-contrast-color);
+      &:hover {
+        background: var(--main-color);
+      }
+    }
+  }
+}
+</style>

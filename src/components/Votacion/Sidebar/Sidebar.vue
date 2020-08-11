@@ -85,6 +85,7 @@ aside {
     }
   }
   .sidebar {
+    height: 90%;
     .sidebar-content {
       height: 100%;
       padding: 20px 15px;

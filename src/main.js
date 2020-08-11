@@ -7,8 +7,8 @@ import store from "./store/index";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faMicrophone,
-  faSquare,
-  faCircle,
+  faEdit,
+  faHome,
   faSun,
   faMoon,
   faChevronRight,
@@ -21,8 +21,8 @@ import VueYoutube from "vue-youtube";
 
 library.add(
   faMicrophone,
-  faSquare,
-  faCircle,
+  faEdit,
+  faHome,
   faSun,
   faMoon,
   faChevronRight,

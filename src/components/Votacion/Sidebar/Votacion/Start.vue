@@ -39,7 +39,7 @@
         >
           <label :for="ronda.value">{{ ronda.name }}</label>
           <div class="checkbox">
-            <input :name="ronda.value" type="checkbox" />
+            <input :name="ronda.value" type="checkbox" checked />
             <span class="checkbox-custom"></span>
           </div>
         </div>
@@ -116,6 +116,11 @@
             <input id="range" type="number" value="0.5" />
           </div>
         </div>
+
+        <div class="ajustes" ref="replicaDOM">
+          <span>Max. para replica</span>
+          <input id="replica" type="number" value="5" />
+        </div>
       </div>
     </div>
 
@@ -166,18 +171,22 @@ export default {
       "updatedformatoActual",
       "updatedFreestyler1",
       "updatedFreestyler2",
-      "updatedpatronesDetalles"
+      "updatedpatronesDetalles",
+      "updatedReplica"
     ]),
 
     startVotacion() {
       this.updatedRondaActual(this.ruta[0]);
     },
 
-    getPatronesDetalles() {
+    getDetalles() {
       const patrones = this.$refs.patronesDOM;
       const skill = this.$refs.skillDOM;
       const flow = this.$refs.flowDOM;
       const escena = this.$refs.escenaDOM;
+      const replica = parseFloat(
+        this.$refs.replicaDOM.querySelector("#replica").value
+      );
 
       const patronesDetalles = {
         patrones: {
@@ -208,6 +217,7 @@ export default {
         ]
       };
       this.updatedpatronesDetalles(patronesDetalles);
+      this.updatedReplica(replica);
     },
 
     sendSetup() {
@@ -223,7 +233,7 @@ export default {
           }
         }
         this.updatedRuta(ruta);
-        this.getPatronesDetalles();
+        this.getDetalles();
       }
       this.startVotacion();
     }
@@ -234,7 +244,7 @@ export default {
 <style lang="scss">
 .setup {
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   .input {
     display: flex;
     flex-direction: column;
@@ -343,12 +353,13 @@ export default {
     }
     &_rango {
       .ajustes {
-        margin-top: 25px;
+        margin-top: 15px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
         &:last-child {
-          margin-bottom: 25px;
+          margin-bottom: 20px;
         }
         > span {
           margin-bottom: 10px;
@@ -356,6 +367,22 @@ export default {
           font-size: 24px;
           text-align: center;
           width: 100%;
+        }
+        > input[type="number"] {
+          width: 90%;
+          padding: 10px 0;
+          border-radius: 12px;
+          font-size: 18px;
+          text-align: center;
+          color: var(--low-contrast-color);
+          border: 3px solid var(--high-contrast-color);
+          background: var(--shadow-color);
+          font-size: 20px;
+          font-size: 18px;
+          font-weight: normal;
+          &:focus {
+            outline: none;
+          }
         }
         .input {
           width: 32%;

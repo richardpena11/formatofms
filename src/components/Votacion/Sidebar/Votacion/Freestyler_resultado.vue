@@ -9,7 +9,7 @@
         <div class="puntos">{{ ronda.total }}</div>
       </div>
     </div>
-  </div>
+  </div> 
 </template>
 
 <script>

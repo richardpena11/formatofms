@@ -68,6 +68,18 @@ export default {
   --menu-shadow-color: var(--bg-color);
 }
 
+#moon {
+  --main-color: #3d5af1;
+  --pure-color: #1a1a1a;
+  --bg-color: #484d51;
+  --shadow-color: #323538;
+  --low-contrast-color: #d9d9d9;
+  --high-contrast-color: #f1f1f1;
+
+  --menu-bg-color: var(--pure-color);
+  --menu-shadow-color: var(--bg-color);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

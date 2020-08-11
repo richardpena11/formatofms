@@ -116,7 +116,7 @@ export default {
 
 <style lang="scss">
 .rondas {
-  overflow-y: scroll;
+  overflow-y: auto;
   .ronda {
     .ronda-title {
       text-align: center;

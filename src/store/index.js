@@ -11,6 +11,7 @@ const defaultState = () => {
     freestyler1: "Freestyler 1",
     freestyler2: "Freestyler 2",
     patronesDetalles: null,
+    replica: null,
     total: new Object()
   };
 };
@@ -44,6 +45,10 @@ export default new Vuex.Store({
 
     updatedpatronesDetalles(state, payload) {
       state.patronesDetalles = payload;
+    },
+
+    updatedReplica(state, payload) {
+      state.replica = payload;
     },
 
     updatedTotalRuta(state, payload) {

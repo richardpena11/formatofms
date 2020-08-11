@@ -28,21 +28,17 @@ export default {
     };
   },
 
-  props: ["info", "hasPuntoExtra"],
-
-  created() {
-    // console.log(this.info);
-  }
+  props: ["info", "hasPuntoExtra"]
 };
 </script>
 
 <style lang="scss">
 .patron {
   min-height: 110px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 5px;
   text-align: center;
   .patron-name {
     font-size: 20px;
@@ -123,6 +119,68 @@ export default {
           background: transparent;
           border-radius: 0px;
         }
+      }
+    }
+    input[type="range"] {
+      -webkit-appearance: none;
+      background: transparent;
+      width: 100%;
+      margin: 18px 0;
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        margin-top: -14px;
+        width: 16px;
+        height: 36px;
+        border-radius: 6px;
+        background: var(--main-color);
+        cursor: pointer;
+      }
+      &::-moz-range-thumb {
+        width: 16px;
+        height: 36px;
+        border-radius: 6px;
+        background: var(--main-color);
+        cursor: pointer;
+      }
+      &::-ms-thumb {
+        width: 16px;
+        height: 36px;
+        border-radius: 6px;
+        background: var(--main-color);
+        cursor: pointer;
+      }
+      &:focus {
+        outline: none;
+      }
+      &::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 8.4px;
+        border-radius: 1.3px;
+        background: var(--bg-color);
+        cursor: pointer;
+      }
+      &::-moz-range-track {
+        width: 100%;
+        height: 8.4px;
+        border-radius: 1.3px;
+        background: var(--bg-color);
+        cursor: pointer;
+      }
+      &::-ms-track {
+        width: 100%;
+        height: 8.4px;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+        cursor: pointer;
+      }
+      &::-ms-fill-lower {
+        background: var(--bg-color);
+        border-radius: 2.6px;
+      }
+      &::-ms-fill-upper {
+        background: var(--bg-color);
+        border-radius: 2.6px;
       }
     }
   }
