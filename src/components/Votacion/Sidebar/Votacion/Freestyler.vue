@@ -39,23 +39,38 @@ export default {
     ...mapMutations(["addPatrones", "addPatronesTotal"])
   },
 
+  computed: {
+
+    rondaActual() {
+      return this.$store.state.rondaActual
+    },
+
+    ruta() {
+      return this.$store.state.ruta
+    },
+
+    inputPatrones() {
+      return Array.from(
+        this.$refs.patrones.querySelectorAll('input[type="range"]')
+      );
+    },
+
+    inputExtra() {
+      return Array.from(
+        this.$refs.patrones.querySelectorAll('input[type="checkbox"]')
+      );
+    }
+  },
+
   beforeDestroy() {
-    const inputPatrones = Array.from(
-      this.$refs.patrones.querySelectorAll('input[type="range"]')
-    );
-
-    const inputExtra = Array.from(
-      this.$refs.patrones.querySelectorAll('input[type="checkbox"]')
-    );
-
     const inputPatronesValue = [];
     const inputExtraValue = [];
 
-    for (const input of inputPatrones) {
+    for (const input of this.inputPatrones) {
       inputPatronesValue.push(input.value);
     }
 
-    for (const input of inputExtra) {
+    for (const input of this.inputExtra) {
       let value;
       if (input.checked) {
         value = 1;

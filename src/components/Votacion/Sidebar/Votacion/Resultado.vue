@@ -2,9 +2,9 @@
   <div class="ronda" v-if="!checkPage">
     <div class="ronda-title">Resultados</div>
     <div class="freestylers">
-      <FreestylerResultado :name="freestyler1" />
+      <FreestylerResultado :rondas="rondas" :name="freestyler1" />
 
-      <FreestylerResultado :name="freestyler2" />
+      <FreestylerResultado :rondas="rondas" :name="freestyler2" />
     </div>
   </div>
 </template>
@@ -13,7 +13,7 @@
 import FreestylerResultado from "./Freestyler_resultado.vue";
 
 export default {
-  props: ["freestyler1", "freestyler2"],
+  props: ["freestyler1", "freestyler2", "rondas"],
 
   components: {
     FreestylerResultado

@@ -1,35 +1,61 @@
 <template>
-  <div class="resultado">
+  <div class="resultado" v-if="displayResults">
     <div class="freestyler-name">
       {{ name }}
     </div>
     <div class="freestyler-info">
       <div class="resultados" v-for="(ronda, index) in total" :key="index">
-        <div class="title">{{ ronda.name }}</div>
+        <div class="title">{{ getRondaName(ronda.name) }}</div>
         <div class="puntos">{{ ronda.total }}</div>
       </div>
     </div>
-  </div> 
+  </div>
 </template>
 
 <script>
-import { mapMutations } from "vuex";
+import { mapActions } from "vuex";
 
 export default {
-  props: ["name"],
+  props: ["name", "rondas"],
 
   methods: {
-    ...mapMutations(["calculateTotal"])
+    ...mapActions(["displayResultsWait"]),
+
+    getRondaName(name) {
+      const ronda = this.rondas[name];
+      if (ronda) {
+        return ronda.name;
+      }
+      return "Total";
+    }
+  },
+
+  watch: {
+    totalIsDone() {
+      console.log("cambio");
+    }
   },
 
   computed: {
     total() {
       return this.$store.state.total[this.name];
+    },
+
+    ruta() {
+      return this.$store.state.ruta;
+    },
+
+    rondaActual() {
+      return this.$store.state.rondaActual;
+    },
+
+    displayResults() {
+      return this.$store.state.displayResults;
     }
   },
 
   created() {
-    this.calculateTotal(this.name);
+    this.displayResultsWait();
   }
 };
 </script>

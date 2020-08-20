@@ -45,13 +45,13 @@ export default {
 
   methods: {
     getVideoInfo() {
-      let videoId;
-
-      if (this.videoInfo) {
+      if (this.$route.params.videoId) {
         videoId = this.$route.params.videoId;
       } else {
         videoId = this.videoPreview;
       }
+
+      let videoId;
 
       const key = "AIzaSyDXiKRSPaCmmkkSlrHpc941T9zo2wrTYK0";
 
@@ -139,6 +139,14 @@ export default {
 @media screen and (max-width: 800px) {
   .youtube {
     width: 100%;
+  }
+}
+
+@media screen and (max-height: 800px) and (max-width: 1000px) {
+  .youtube {
+    &-info {
+      display: none;
+    }
   }
 }
 </style>

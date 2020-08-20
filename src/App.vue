@@ -51,6 +51,7 @@ export default {
   --shadow-color: #d9d9d9;
   --low-contrast-color: #484d51;
   --high-contrast-color: #323538;
+  --error-color: #eb3d3d;
 
   --menu-bg-color: var(--high-contrast-color);
   --menu-shadow-color: var(--low-contrast-color);
@@ -63,6 +64,7 @@ export default {
   --shadow-color: #484d51;
   --low-contrast-color: #d9d9d9;
   --high-contrast-color: #f1f1f1;
+  --error-color: #eb3d3d;
 
   --menu-bg-color: var(--pure-color);
   --menu-shadow-color: var(--bg-color);
@@ -81,6 +83,7 @@ export default {
 }
 
 * {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;

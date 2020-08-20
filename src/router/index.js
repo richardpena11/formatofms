@@ -4,6 +4,7 @@ import Ligas from "../views/Info/Ligas.vue";
 import Temporadas from "../views/Info/Temporadas.vue";
 import Jornada from "../views/Info/Jornada.vue";
 import Votacion from "../views/Votacion/Votacion.vue";
+import Admin from "../views/Admin/Admin.vue";
 
 Vue.use(VueRouter);
 
@@ -35,6 +36,11 @@ const routes = [
     path: "/votar/:videoId",
     name: "Votacion",
     component: Votacion
+  },
+  {
+    path: "/admin",
+    name: "Admin",
+    component: Admin
   }
 ];
 

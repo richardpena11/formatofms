@@ -12,6 +12,7 @@ const defaultState = () => {
     freestyler2: "Freestyler 2",
     patronesDetalles: null,
     replica: null,
+    displayResults: false,
     total: new Object()
   };
 };
@@ -75,24 +76,36 @@ export default new Vuex.Store({
       state.total[payload.name][payload.ronda].name = payload.ronda;
     },
 
-    calculateTotal(state, payload) {
-      const totalArr = [];
-
-      for (const ronda of state.ruta) {
-        const totalRonda = state.total[payload][ronda];
-        if (totalRonda) {
-          totalArr.push(totalRonda.total);
+    calculateTotal(state) {
+      for (const freestyler in state.total) {
+        const totalArr = [];
+        for (const ronda of state.ruta) {
+          const totalRonda = state.total[freestyler][ronda];
+          if (totalRonda) {
+            totalArr.push(totalRonda.total);
+          }
         }
-      }
 
-      const total = totalArr.reduce((acc, cur) => acc + cur);
-      state.total[payload].total = { name: "total", total };
+        const total = totalArr.reduce((acc, cur) => acc + cur);
+        state.total[freestyler].total = { name: "total", total };
+      }
     },
 
     readyRenderResultados(state) {
       state.readyResultado = true;
+    },
+
+    displayResults(state) {
+      state.displayResults = true;
     }
   },
-  actions: {},
+  actions: {
+    displayResultsWait(context) {
+      setTimeout(() => {
+        context.commit("calculateTotal");
+        context.commit("displayResults");
+      }, 500);
+    }
+  },
   modules: {}
 });

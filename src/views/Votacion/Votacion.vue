@@ -49,6 +49,7 @@ export default {
 
 @media screen and (max-width: 1000px) {
   .votar {
+    height: initial;
     flex-direction: column;
     .sidebar-container {
       height: 50vh;

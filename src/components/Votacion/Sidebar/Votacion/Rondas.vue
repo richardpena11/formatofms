@@ -25,7 +25,12 @@
         <button @click="nextRonda">Siguiente</button>
       </div>
     </div>
-    <resultado :freestyler1="freestyler1" :freestyler2="freestyler2" v-else />
+    <resultado
+      :freestyler1="freestyler1"
+      :freestyler2="freestyler2"
+      :rondas="rondas"
+      v-else
+    />
   </div>
 </template>
 
@@ -77,13 +82,8 @@ export default {
     patronesDetalles() {
       const patronesDetalles = this.$store.state.patronesDetalles;
       if (patronesDetalles) {
-        console.log(patronesDetalles);
         return patronesDetalles;
       }
-      console.log({
-        patrones: this.formatos[this.formatoActual].patrones,
-        patronesExtra: this.formatos[this.formatoActual].patronesExtra
-      });
       return {
         patrones: this.formatos[this.formatoActual].patrones,
         patronesExtra: this.formatos[this.formatoActual].patronesExtra

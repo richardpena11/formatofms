@@ -262,12 +262,9 @@ export default {
       color: var(--low-contrast-color);
       border: 3px solid var(--high-contrast-color);
       background: var(--shadow-color);
-      font-size: 20px;
       font-size: 18px;
       font-weight: normal;
-      &:focus {
-        outline: none;
-      }
+      outline: none;
     }
   }
   .formato {
