@@ -2,7 +2,7 @@
   <div class="youtube">
     <youtube
       class="youtube-player"
-      :video-id="videoId ? videoId : videoPreview"
+      :video-id="videoId"
       :resizeDelay="0"
       :resize="true"
       :fitParent="true"
@@ -11,6 +11,7 @@
     <div v-if="videoInfo" class="youtube-info">
       <div class="youtube-info-title">
         {{ videoInfo.title }}
+        {{ videoId }}
       </div>
       <div class="youtube-info-extra">
         <div class="youtube-info-extra-channel">
@@ -28,8 +29,7 @@
 export default {
   data() {
     return {
-      videoInfo: null,
-      videoPreview: "mNJz5L6wbCg"
+      videoInfo: null
     };
   },
 
@@ -45,22 +45,21 @@ export default {
 
   methods: {
     getVideoInfo() {
-      if (this.$route.params.videoId) {
-        videoId = this.$route.params.videoId;
-      } else {
-        videoId = this.videoPreview;
-      }
+      let videoId = this.videoId;
 
-      let videoId;
-
-      const key = "AIzaSyDXiKRSPaCmmkkSlrHpc941T9zo2wrTYK0";
+      const key = "AIzaSyC27UH20EW-zeryHBNeCt0-hNFqTiUR8EM";
 
       const apiUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=${videoId}&key=${key}`;
 
       this.$http
         .get(apiUrl)
         .then(response => response.json())
-        .then(data => (this.videoInfo = data.items[0].snippet))
+        .then(
+          data =>
+            (this.videoInfo = data.items.find(
+              el => el.id.videoId === videoId
+            ).snippet)
+        )
         .catch(err => console.error(err));
     },
 

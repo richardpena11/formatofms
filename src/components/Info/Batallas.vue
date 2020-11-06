@@ -1,36 +1,33 @@
 <template>
   <div class="batallas">
-    <div v-for="(batalla, index) in info" :key="index" class="batalla">
-      <div class="mc">
-        <span class="mc-name">{{ batalla.mc1.name }}</span>
-        <span class="mc-ptb">({{ batalla.mc1.PTB }})</span>
-      </div>
+    <div v-for="(batalla, index) in info" :key="index">
+      <batalla :info="batalla" />
+    </div>
 
-      <span class="puntos">
-        {{ batalla.mc1.puntos }} - {{ batalla.mc2.puntos }}
-      </span>
-
-      <div class="mc">
-        <span class="mc-name">{{ batalla.mc2.name }}</span>
-        <span class="mc-ptb">({{ batalla.mc2.PTB }})</span>
-      </div>
-
-      <div>
-        <font-awesome-icon class="icon" icon="play-circle" />
+    <div v-if="exhibicion" class="exhibicion">
+      <span class="title">Exhibicion:</span>
+      <div v-for="(batalla, index) in exhibicion" :key="index">
+        <batalla :info="batalla" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Batalla from "./Batalla.vue";
+
 export default {
-  props: ["info"]
+  props: ["info", "exhibicion"],
+
+  components: {
+    Batalla
+  }
 };
 </script>
 
 <style lang="scss">
 .batallas {
-  padding: 10px;
+  padding: 20px 30px;
   width: 100%;
   max-width: 500px;
   background: var(--shadow-color);
@@ -38,40 +35,15 @@ export default {
   flex-direction: column;
   justify-content: space-around;
   border-radius: 12px;
-  .batalla {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 15px 0;
-    font-size: 20px;
-    color: var(--high-contrast-color);
-    .mc {
-      width: 100px;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-    }
-    .puntos {
-      background: var(--high-contrast-color);
-      padding: 7px;
-      border-radius: 12px;
-      font-size: 24px;
-      color: var(--pure-color);
-    }
-    .icon {
-      font-size: 30px;
+  .exhibicion {
+    .title {
+      display: block;
+      color: var(--high-contrast-color);
+      font-size: 20px;
+      margin: 10px 0px 15px 20px;
     }
   }
 }
 
-@media screen and (max-width: 400px) {
-  .batallas {
-    .batalla{
-      font-size: 18px;
-      .puntos {
-        font-size: 22px;
-      }
-    }
-  }
-}
+
 </style>

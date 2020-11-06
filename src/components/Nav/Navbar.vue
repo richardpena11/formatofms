@@ -3,21 +3,12 @@
     <div class="item" v-for="(item, index) in nav" :key="index">
       <router-link
         v-if="item.type === 'link'"
-        :class="`link ${currentPage.includes(item.link) ? 'link--active' : ''}`"
+        class="link"
         :to="item.link"
       >
         <font-awesome-icon class="icon" :icon="item.ico" />
         <span class="title"> {{ item.titulo }} </span>
       </router-link>
-
-      <div
-        v-if="item.type === 'action'"
-        class="link"
-        @click="checkTheme(theme)"
-      >
-        <font-awesome-icon class="icon" :icon="theme" />
-        <span class="title"> {{ item.titulo }} </span>
-      </div>
 
       <div class="subitem" v-if="item.submenu">
         <router-link
@@ -29,6 +20,33 @@
           <font-awesome-icon class="icon" icon="chevron-right" />
           <span>{{ subitem.titulo }}</span>
         </router-link>
+      </div>
+
+      <div
+        v-if="item.type === 'action'"
+        class="link"
+        @click="checkTheme(theme)"
+      >
+        <font-awesome-icon class="icon" :icon="theme" />
+        <span class="title"> {{ item.titulo }} </span>
+      </div>
+
+      <router-link
+        v-if="item.type === 'dash' && isAuth"
+        :class="`link ${currentPage.includes(item.link) ? 'link--active' : ''}`"
+        :to="item.link"
+      >
+        <font-awesome-icon class="icon" :icon="item.ico" />
+        <span class="title"> {{ item.titulo }} </span>
+      </router-link>
+
+      <div
+        v-if="item.type === 'logout' && isAuth"
+        class="link"
+        @click="logOutUser()"
+      >
+        <font-awesome-icon class="icon" :icon="item.ico" />
+        <span class="title"> {{ item.titulo }} </span>
       </div>
     </div>
   </div>
@@ -47,6 +65,13 @@ export default {
   computed: {
     currentPage() {
       return this.$route.path;
+    },
+
+    isAuth() {
+      if (this.$store.state.admin.token) {
+        return true;
+      }
+      return false;
     }
   },
 
@@ -74,6 +99,10 @@ export default {
       }
 
       this.changeTheme(newTheme);
+    },
+
+    logOutUser() {
+      this.$store.commit("admin/logOutUser");
     }
   },
 

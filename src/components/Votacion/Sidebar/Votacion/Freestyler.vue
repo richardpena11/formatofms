@@ -20,7 +20,6 @@
 </template>
 
 <script>
-import { mapMutations } from "vuex";
 import Patron from "./Patron.vue";
 
 export default {
@@ -35,18 +34,13 @@ export default {
 
   components: { Patron },
 
-  methods: {
-    ...mapMutations(["addPatrones", "addPatronesTotal"])
-  },
-
   computed: {
-
     rondaActual() {
-      return this.$store.state.rondaActual
+      return this.$store.state.votacion.rondaActual;
     },
 
     ruta() {
-      return this.$store.state.ruta
+      return this.$store.state.votacion.ruta;
     },
 
     inputPatrones() {
@@ -83,14 +77,14 @@ export default {
     const inputValue = [...inputPatronesValue, ...inputExtraValue];
 
     for (const value of inputValue) {
-      this.addPatrones({
+      this.$store.commit("votacion/addPatrones", {
         value: value,
         name: this.nombre,
         ronda: this.ronda
       });
     }
 
-    this.addPatronesTotal({
+    this.$store.commit("votacion/addPatronesTotal", {
       name: this.nombre,
       ronda: this.ronda
     });

@@ -2,7 +2,7 @@
   <div v-if="info" class="navigation-container">
     <div v-if="info" class="navigation">
       <div class="btn_action previous">
-        <router-link class="btn-link" v-if="info.previous" :to="info.previous">
+        <router-link class="btn-link" v-if="info.prev" :to="info.prev">
           <font-awesome-icon class="icon" icon="chevron-left" />
         </router-link>
       </div>

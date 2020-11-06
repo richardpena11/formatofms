@@ -1,12 +1,12 @@
 <template>
-  <div class="rondas">
+  <div class="rondas" ref="rondasDOM">
     <div class="ronda" v-if="rondaActual === ronda">
-      <div class="ronda-title">{{ rondas[ronda].name }}</div>
+      <div class="ronda-title">{{ rondas.find(el => el.value === ronda).name }}</div>
 
       <div class="freestylers">
         <freestyler
           :nombre="freestyler1"
-          :contidadPatrones="rondas[ronda].patrones"
+          :contidadPatrones="rondas.find(el => el.value === ronda).patrones"
           :patrones="patronesDetalles.patrones"
           :patronesExtra="patronesDetalles.patronesExtra"
           :ronda="ronda"
@@ -14,7 +14,7 @@
 
         <freestyler
           :nombre="freestyler2"
-          :contidadPatrones="rondas[ronda].patrones"
+          :contidadPatrones="rondas.find(el => el.value === ronda).patrones"
           :patrones="patronesDetalles.patrones"
           :patronesExtra="patronesDetalles.patronesExtra"
           :ronda="ronda"
@@ -37,7 +37,6 @@
 <script>
 import Freestyler from "./Freestyler.vue";
 import Resultado from "./Resultado.vue";
-import { mapMutations } from "vuex";
 
 export default {
   data() {
@@ -46,14 +45,13 @@ export default {
     };
   },
 
-  props: ["rondas", "formatos"],
+  props: ["rondas"],
 
   methods: {
-    ...mapMutations(["updatedRondaActual"]),
-
     nextRonda() {
       const nextRondaI = this.ruta.findIndex(el => el === this.rondaActual) + 1;
-      this.updatedRondaActual(this.ruta[nextRondaI]);
+      this.$store.commit("votacion/updatedRondaActual", this.ruta[nextRondaI]);
+      this.$refs.rondasDOM.scrollTo(0, 0);
     },
 
     checkRondaActual() {
@@ -68,34 +66,27 @@ export default {
 
   computed: {
     ruta() {
-      return this.$store.state.ruta;
+      return this.$store.state.votacion.ruta;
     },
 
     rondaActual() {
-      return this.$store.state.rondaActual;
+      return this.$store.state.votacion.rondaActual;
     },
 
     formatoActual() {
-      return this.$store.state.formatoActual;
+      return this.$store.state.votacion.formatoActual;
     },
 
     patronesDetalles() {
-      const patronesDetalles = this.$store.state.patronesDetalles;
-      if (patronesDetalles) {
-        return patronesDetalles;
-      }
-      return {
-        patrones: this.formatos[this.formatoActual].patrones,
-        patronesExtra: this.formatos[this.formatoActual].patronesExtra
-      };
+      return this.$store.state.votacion.patronesDetalles;
     },
 
     freestyler1() {
-      return this.$store.state.freestyler1;
+      return this.$store.state.votacion.freestyler1;
     },
 
     freestyler2() {
-      return this.$store.state.freestyler2;
+      return this.$store.state.votacion.freestyler2;
     }
   },
 

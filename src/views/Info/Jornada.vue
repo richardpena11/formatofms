@@ -1,13 +1,30 @@
 <template>
   <div v-if="info" class="home">
-    <Navigation :info="infoJornada" />
+    <navigation :info="infoJornada" />
     <div class="jornada_container">
-      <h2 class="title">
-        FMS {{ info[pais].title }}: {{ infoJornada.nombre }}
-      </h2>
+      <div class="title">
+        <h2>FMS {{ info[pais].title }}</h2>
+        <h3>
+          {{ info[pais].temporadas[temporada - 1].nombre }}:
+          {{ infoJornada.nombre }}
+        </h3>
+      </div>
       <div class="jornada">
-        <batallas :info="infoJornada.batallas" />
-        <tabla :info="infoJornada.tabla" />
+        <participantes
+          v-if="infoJornada.participantes"
+          :info="infoJornada.participantes"
+        />
+        <batallas
+          v-if="infoJornada.batallas"
+          :info="infoJornada.batallas"
+          :exhibicion="infoJornada.exhibicion"
+        />
+        <tabla v-if="infoJornada.tabla" :info="infoJornada.tabla" />
+        <playOff
+          v-if="infoJornada.clasificados"
+          :info="infoJornada.clasificados"
+        />
+        <torneo v-if="infoJornada.torneo" :info="infoJornada.torneo" />
       </div>
     </div>
   </div>
@@ -15,8 +32,11 @@
 
 <script>
 import Navigation from "../../components/Info/Navigation.vue";
+import Participantes from "../../components/Info/Participantes.vue";
 import Batallas from "../../components/Info/Batallas.vue";
 import Tabla from "../../components/Info/Tabla.vue";
+import PlayOff from "../../components/Info/PlayOff.vue";
+import Torneo from "../../components/Info/Torneo.vue";
 
 export default {
   name: "Info",
@@ -24,43 +44,48 @@ export default {
   data() {
     return {
       infoJornada: null,
-      pais: null
+      pais: null,
+      temporada: null,
+      jornada: null
     };
   },
 
   props: ["info"],
 
   methods: {
-    getDataFromId(ID) {
-      const IDArr = ID.split("");
-      this.temporada = IDArr[1];
-      this.jornada = IDArr[3];
+    getDataFromId() {
+      this.pais = this.$route.params.pais;
+      this.temporada = this.$route.params.temporada;
+      this.jornada = this.$route.params.jornada;
 
-      const id = {
-        temporada: IDArr[1],
-        jornada: IDArr[3]
-      };
-
-      return id;
+      if (this.jornada.includes("BA")) {
+        this.jornada = parseInt(this.jornada.replace(/BA/g, ""));
+        this.infoJornada = this.info[this.pais].temporadas[this.temporada - 1].aplazadas[this.jornada - 1];
+      } else if (this.jornada.includes("PlayOff")) {
+        this.infoJornada = this.info[this.pais].temporadas[this.temporada - 1].playOff;
+      } else {
+        this.infoJornada = this.info[this.pais].temporadas[this.temporada - 1].jornadas[this.jornada - 1];
+      }
     }
   },
 
   created() {
-    this.pais = this.$route.params.pais;
-    const id = this.getDataFromId(this.$route.params.id);
-    this.infoJornada = this.info[this.pais].temporadas[id.temporada - 1].jornadas[id.jornada - 1];
+    this.getDataFromId();
   },
 
-  updated() {
-    this.pais = this.$route.params.pais;
-    const id = this.getDataFromId(this.$route.params.id);
-    this.infoJornada = this.info[this.pais].temporadas[id.temporada - 1].jornadas[id.jornada - 1];
+  watch: {
+    $route() {
+      this.getDataFromId();
+    }
   },
 
   components: {
     Navigation,
+    Participantes,
     Batallas,
-    Tabla
+    Tabla,
+    PlayOff,
+    Torneo
   }
 };
 </script>
@@ -79,6 +104,13 @@ export default {
     color: var(--high-contrast-color);
     margin-bottom: 50px;
     text-align: center;
+    h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: 22px;
+    }
   }
   .jornada {
     display: flex;

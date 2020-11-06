@@ -131,8 +131,6 @@
 </template>
 
 <script>
-import { mapMutations } from "vuex";
-
 export default {
   data() {
     return {
@@ -146,37 +144,31 @@ export default {
 
   watch: {
     option(val) {
-      this.updatedformatoActual(val);
+      this.$store.commit("votacion/updatedformatoActual", val);
     },
 
     freestyler1(val) {
-      this.updatedFreestyler1(val);
+      this.$store.commit("votacion/updatedFreestyler1", val);
     },
 
     freestyler2(val) {
-      this.updatedFreestyler2(val);
+      this.$store.commit("votacion/updatedFreestyler2", val);
     }
   },
 
   computed: {
     ruta() {
-      return this.$store.state.ruta;
+      return this.$store.state.votacion.ruta;
+    },
+
+    formatoActual() {
+      return this.$store.state.votacion.formatoActual;
     }
   },
 
   methods: {
-    ...mapMutations([
-      "updatedRuta",
-      "updatedRondaActual",
-      "updatedformatoActual",
-      "updatedFreestyler1",
-      "updatedFreestyler2",
-      "updatedpatronesDetalles",
-      "updatedReplica"
-    ]),
-
     startVotacion() {
-      this.updatedRondaActual(this.ruta[0]);
+      this.$store.commit("votacion/updatedRondaActual", this.ruta[0]);
     },
 
     getDetalles() {
@@ -216,13 +208,31 @@ export default {
           }
         ]
       };
-      this.updatedpatronesDetalles(patronesDetalles);
-      this.updatedReplica(replica);
+      this.$store.commit("votacion/updatedpatronesDetalles", patronesDetalles);
+      this.$store.commit("votacion/updatedReplica", replica);
     },
 
     sendSetup() {
       if (this.option !== "personalizado") {
-        this.updatedRuta(this.formatos[this.option].rondas);
+        this.$store.commit(
+          "votacion/updatedRuta",
+          this.formatos.find(el => el.value === this.option).rondas
+        );
+        const patronesDetalles = {
+          patrones: this.formatos.find(el => el.value === this.formatoActual)
+            .patrones,
+          patronesExtra: this.formatos.find(
+            el => el.value === this.formatoActual
+          ).patronesExtra
+        };
+        const replica = this.formatos.find(
+          el => el.value === this.formatoActual
+        ).maxReplica;
+        this.$store.commit(
+          "votacion/updatedpatronesDetalles",
+          patronesDetalles
+        );
+        this.$store.commit("votacion/updatedReplica", replica);
       } else {
         const ruta = [];
         const formatoArr = Array.from(this.$refs.checkFormato.children);
@@ -232,7 +242,7 @@ export default {
             ruta.push(rondaEl.name);
           }
         }
-        this.updatedRuta(ruta);
+        this.$store.commit("votacion/updatedRuta", ruta);
         this.getDetalles();
       }
       this.startVotacion();
@@ -415,6 +425,7 @@ export default {
     margin-top: auto;
     display: flex;
     justify-content: center;
+    margin-top: 10px;
     button {
       padding: 10px 20px;
       font-size: 20px;
@@ -422,7 +433,7 @@ export default {
       border-radius: 12px;
       color: var(--main-color);
       font-weight: bold;
-      border: 5px solid var(--main-color);
+      border: 3px solid var(--main-color);
       &:focus {
         outline: none;
       }

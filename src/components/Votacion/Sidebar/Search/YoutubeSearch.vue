@@ -32,6 +32,14 @@
           <div class="channel">{{ video.snippet.channelTitle }}</div>
         </div>
       </router-link>
+      <div class="result-navigation">
+        <button v-if="api.prevPageToken" @click="submitVideoSeach('prev')">
+          Anterior
+        </button>
+        <button v-if="api.nextPageToken" @click="submitVideoSeach('next')">
+          Siguiente
+        </button>
+      </div>
     </div>
     <div v-else class="waiting-search">
       <font-awesome-icon class="icon" icon="search" />
@@ -51,7 +59,7 @@ export default {
         type: "video",
         query: "",
         maxResults: 20,
-        key: "AIzaSyDXiKRSPaCmmkkSlrHpc941T9zo2wrTYK0",
+        key: "AIzaSyC27UH20EW-zeryHBNeCt0-hNFqTiUR8EM",
         prevPageToken: "",
         nextPageToken: ""
       }
@@ -59,14 +67,35 @@ export default {
   },
 
   methods: {
-    submitVideoSeach() {
-      const { baseUrl, part, type, maxResults, query, key } = this.api;
-      const apiUrl = `${baseUrl}part=${part}&type=${type}&q=${query}&maxResults=${maxResults}&key=${key}`;
+    submitVideoSeach(typeSubmit) {
+      const {
+        baseUrl,
+        part,
+        type,
+        maxResults,
+        query,
+        key,
+        prevPageToken,
+        nextPageToken
+      } = this.api;
+
+      let apiUrl;
+      if (typeSubmit === "next") {
+        apiUrl = `${baseUrl}part=${part}&type=${type}&q=${query}&maxResults=${maxResults}&key=${key}&pageToken=${nextPageToken}`;
+      } else if (typeSubmit === "prev") {
+        apiUrl = `${baseUrl}part=${part}&type=${type}&q=${query}&maxResults=${maxResults}&key=${key}&pageToken=${prevPageToken}`;
+      } else {
+        apiUrl = `${baseUrl}part=${part}&type=${type}&q=${query}&maxResults=${maxResults}&key=${key}`;
+      }
 
       this.$http
         .get(apiUrl)
         .then(response => response.json())
-        .then(data => (this.result = data))
+        .then(data => {
+          (this.result = data),
+            (this.api.prevPageToken = data.prevPageToken),
+            (this.api.nextPageToken = data.nextPageToken);
+        })
         .catch(err => console.error(err));
     }
   }
@@ -82,7 +111,7 @@ export default {
     &:hover {
       border: 2px solid var(--main-color);
       .search-btn {
-        border-left: 2px solid var(--high-contrast-color);
+        border-left: 2px solid var(--main-color);
       }
     }
     .search-input {
@@ -109,7 +138,6 @@ export default {
       transition: all 200ms;
       &:hover {
         background: var(--main-color);
-        color: var(--shadow-color);
       }
       &:focus {
         outline: none;
@@ -137,6 +165,28 @@ export default {
       background: var(--low-contrast-color);
       &:hover {
         background: var(--main-color);
+      }
+    }
+    .result-navigation {
+      width: 100%;
+      margin: 5px 0;
+      display: flex;
+      justify-content: space-around;
+      button {
+        padding: 7px 15px;
+        font-size: 18px;
+        background: transparent;
+        border-radius: 12px;
+        color: var(--main-color);
+        font-weight: bold;
+        border: 3px solid var(--main-color);
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          background: var(--main-color);
+          color: #f1f1f1;
+        }
       }
     }
     .video {

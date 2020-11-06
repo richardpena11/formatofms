@@ -10,19 +10,27 @@ import YoutubePlayer from "../../components/Votacion/Player/Youtube.vue";
 import Sidebar from "../../components/Votacion/Sidebar/Sidebar.vue";
 
 export default {
-  data() {
-    return {
-      videoId: null
-    };
+  beforeCreate() {
+    this.$store.commit(
+      "votacion/updatedVideoActual",
+      this.$route.params.videoId
+    );
   },
 
-  created() {
-    this.videoId = this.$route.params.videoId;
+  computed: {
+    videoId() {
+      if (this.$route.params.videoId) {
+        return this.$route.params.videoId;
+      } else {
+        return this.$store.state.votacion.videoActual;
+      }
+    }
   },
 
   watch: {
     $route() {
-      this.videoId = this.$route.params.videoId;
+      const videoIdRoute = this.$route.params.videoId;
+      this.$store.commit("votacion/updatedVideoActual", videoIdRoute);
     }
   },
 

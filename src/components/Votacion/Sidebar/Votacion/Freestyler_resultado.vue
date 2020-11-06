@@ -13,16 +13,12 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
-
 export default {
   props: ["name", "rondas"],
 
   methods: {
-    ...mapActions(["displayResultsWait"]),
-
-    getRondaName(name) {
-      const ronda = this.rondas[name];
+    getRondaName(rondaName) {
+      const ronda = this.rondas.find(el => el.value === rondaName);
       if (ronda) {
         return ronda.name;
       }
@@ -30,32 +26,26 @@ export default {
     }
   },
 
-  watch: {
-    totalIsDone() {
-      console.log("cambio");
-    }
-  },
-
   computed: {
     total() {
-      return this.$store.state.total[this.name];
+      return this.$store.state.votacion.total[this.name];
     },
 
     ruta() {
-      return this.$store.state.ruta;
+      return this.$store.state.votacion.ruta;
     },
 
     rondaActual() {
-      return this.$store.state.rondaActual;
+      return this.$store.state.votacion.rondaActual;
     },
 
     displayResults() {
-      return this.$store.state.displayResults;
+      return this.$store.state.votacion.displayResults;
     }
   },
 
   created() {
-    this.displayResultsWait();
+    this.$store.dispatch("votacion/displayResultsWait");
   }
 };
 </script>
@@ -63,6 +53,7 @@ export default {
 <style lang="scss">
 .resultado {
   .freestyler-name {
+    text-align: center;
     color: var(--high-contrast-color);
     font-size: 24px;
     font-weight: bold;

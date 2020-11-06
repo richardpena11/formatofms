@@ -3,7 +3,9 @@
     <div class="action">
       <div
         :class="
-          `action_btn action_votar ${ sidebarStatus === 'votar' ? 'action_btn-active' : '' }`
+          `action_btn action_votar ${
+            sidebarStatus === 'votar' ? 'action_btn-active' : ''
+          }`
         "
         @click="changeSidebarStatus('votar')"
       >
@@ -21,7 +23,10 @@
       </div>
     </div>
     <div class="sidebar">
-      <youtube-search class="sidebar-content" v-if="sidebarStatus === 'search'" />
+      <youtube-search
+        class="sidebar-content"
+        v-if="sidebarStatus === 'search'"
+      />
       <votacion class="sidebar-content" v-if="sidebarStatus === 'votar'" />
     </div>
   </aside>
@@ -34,7 +39,7 @@ import votacion from "./Votacion/Votacion.vue";
 export default {
   data() {
     return {
-      sidebarStatus: "votar"
+      sidebarStatus: "search"
     };
   },
 
@@ -42,6 +47,10 @@ export default {
     changeSidebarStatus(newStatus) {
       this.sidebarStatus = newStatus;
     }
+  },
+
+  created() {
+    this.$store.commit("votacion/resetVotacion");
   },
 
   components: {

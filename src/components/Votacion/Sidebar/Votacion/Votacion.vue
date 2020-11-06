@@ -14,8 +14,6 @@
 import Start from "./Start.vue";
 import Rondas from "./Rondas.vue";
 
-import { mapMutations } from "vuex";
-
 export default {
   data() {
     return {
@@ -28,13 +26,11 @@ export default {
 
   computed: {
     rondaActual() {
-      return this.$store.state.rondaActual;
+      return this.$store.state.votacion.rondaActual;
     }
   },
 
   methods: {
-    ...mapMutations(["resetVotacion"]),
-
     fetchData() {
       this.$http
         .get("Formatos.json")
@@ -56,7 +52,6 @@ export default {
 
   created() {
     this.fetchData();
-    this.resetVotacion();
   },
 
   components: {

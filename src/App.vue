@@ -32,6 +32,8 @@ export default {
   },
 
   created() {
+    this.$store.dispatch("admin/refreshToken");
+
     this.fetchData();
   },
 
@@ -73,8 +75,8 @@ export default {
 #moon {
   --main-color: #3d5af1;
   --pure-color: #1a1a1a;
-  --bg-color: #484d51;
-  --shadow-color: #323538;
+  --bg-color: #323538;
+  --shadow-color: #484d51;
   --low-contrast-color: #d9d9d9;
   --high-contrast-color: #f1f1f1;
 
@@ -104,6 +106,7 @@ body {
 @media screen and (max-width: 550px) {
   body {
     padding-left: 0px;
+    padding-bottom: 80px;
   }
 }
 </style>
