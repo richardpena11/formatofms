@@ -45,5 +45,9 @@ export default {
   }
 }
 
-
+@media screen and (max-width: 380px) {
+  .batallas {
+    padding: 20px 8px;
+  }
+}
 </style>

@@ -1,11 +1,7 @@
 <template>
   <div class="nav">
     <div class="item" v-for="(item, index) in nav" :key="index">
-      <router-link
-        v-if="item.type === 'link'"
-        class="link"
-        :to="item.link"
-      >
+      <router-link v-if="item.type === 'link'" class="link" :to="item.link">
         <font-awesome-icon class="icon" :icon="item.ico" />
         <span class="title"> {{ item.titulo }} </span>
       </router-link>
@@ -231,11 +227,11 @@ export default {
     top: initial;
     bottom: 0;
     width: 100%;
-    height: 80px;
+    height: 64px;
     .item {
       .link {
         margin-left: initial;
-        padding: 20px;
+        padding: 12px;
 
         .title {
           display: none;
@@ -260,6 +256,7 @@ export default {
       }
 
       &:last-child {
+        width: 64px;
         position: initial;
       }
     }
@@ -267,7 +264,7 @@ export default {
     &:hover {
       .item {
         &:last-child {
-          width: 80px;
+          width: 64px;
         }
       }
     }

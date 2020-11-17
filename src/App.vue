@@ -3,22 +3,44 @@
     <div id="sun">
       <Navbar />
       <router-view v-if="info" :info="info" class="main" />
+      <CookieLaw>
+        <div slot-scope="props">
+          <p class="Cookie__content">{{ cookies.message }} <span></span></p>
+          <div class="Cookie__buttons">
+            <button class="Cookie__button" @click="props.accept">
+              {{ cookies.buttonText }}
+            </button>
+            <router-link class="Cookie__button" :to="cookies.link">
+              <span>{{ cookies.linkText }}</span>
+            </router-link>
+          </div>
+        </div>
+      </CookieLaw>
     </div>
   </div>
 </template>
 
 <script>
 import Navbar from "@/components/Nav/Navbar.vue";
+import CookieLaw from "vue-cookie-law";
 
 export default {
   data() {
     return {
-      info: null
+      info: null,
+      cookies: {
+        message:
+          "Esta pagina utiliza cookies para poder funcionar. Si continuas en esta paginas aceptas el uso de estos.",
+        buttonText: "Acepto",
+        link: "/cookies",
+        linkText: "Mas Info."
+      }
     };
   },
 
   components: {
-    Navbar
+    Navbar,
+    CookieLaw
   },
 
   methods: {
@@ -103,10 +125,56 @@ body {
   }
 }
 
+.Cookie {
+  padding: 20px;
+  border-top: 5px solid var(--bg-color);
+  background: var(--shadow-color);
+  > div {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .Cookie__content {
+      margin-right: 20px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 24px;
+      color: var(--high-contrast-color);
+    }
+    .Cookie__buttons {
+      .Cookie__button {
+        text-decoration: none;
+        font-size: 18px;
+        margin-right: 20px;
+        padding: 12px 40px;
+        border-radius: 10px;
+        background: var(--main-color);
+        opacity: 0.9;
+        &:hover {
+          background: var(--main-color);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 550px) {
   body {
     padding-left: 0px;
-    padding-bottom: 80px;
+    padding-bottom: 64px;
+  }
+  .Cookie {
+    padding: 10px;
+    > div {
+      flex-direction: column;
+    }
+    .Cookie__buttons {
+      margin-top: 10px;
+    }
   }
 }
 </style>

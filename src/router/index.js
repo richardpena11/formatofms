@@ -12,6 +12,8 @@ import Dashboard from "../views/Admin/Dashboard.vue";
 import addJornada from "../views/Admin/addJornada.vue";
 import addLiga from "../views/Admin/addLiga.vue";
 import addTemporada from "../views/Admin/addTemporada.vue";
+import cookies from "../views/law/cookies.vue";
+import notFound from "../views/notFound/index.vue";
 
 Vue.use(VueRouter);
 
@@ -75,11 +77,15 @@ const routes = [
     path: "/admin/add_liga",
     component: addLiga,
     ...authGuard
-  }
+  },
+  {
+    path: "/cookies",
+    component: cookies
+  },
+  { path: "*", component: notFound }
 ];
 
 const router = new VueRouter({
-  mode: "history",
   routes,
   scrollBehavior() {
     return { x: 0, y: 0 };
