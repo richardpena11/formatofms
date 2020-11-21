@@ -3,12 +3,13 @@
     <div class="ronda" v-if="rondaActual === ronda">
       <div class="ronda-title">{{ rondas.find(el => el.value === ronda).name }}</div>
 
-      <div class="freestylers">
+      <div :class="`freestylers ${orderFreestyler}`">
         <freestyler
           :nombre="freestyler1"
           :contidadPatrones="rondas.find(el => el.value === ronda).patrones"
           :patrones="patronesDetalles.patrones"
           :patronesExtra="patronesDetalles.patronesExtra"
+          :rondas="rondas"
           :ronda="ronda"
         />
 
@@ -17,6 +18,7 @@
           :contidadPatrones="rondas.find(el => el.value === ronda).patrones"
           :patrones="patronesDetalles.patrones"
           :patronesExtra="patronesDetalles.patronesExtra"
+          :rondas="rondas"
           :ronda="ronda"
         />
       </div>
@@ -87,6 +89,17 @@ export default {
 
     freestyler2() {
       return this.$store.state.votacion.freestyler2;
+    },
+
+    orderFreestyler() {
+      const rondaActual = this.rondaActual;
+      const ruta = this.ruta;
+      const i = ruta.findIndex(el => el === rondaActual);
+      console.log(i % 2);
+      if (i % 2 === 1) {
+        return "freestylers--reverse";
+      }
+      return "";
     }
   },
 
@@ -126,6 +139,9 @@ export default {
           margin: 10px 0 20px 0;
         }
       }
+    }
+    .freestylers--reverse {
+      flex-direction: row-reverse;
     }
     .btn {
       margin-top: auto;

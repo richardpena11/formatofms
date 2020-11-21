@@ -3,7 +3,11 @@
     <div id="sun">
       <Navbar />
       <router-view v-if="info" :info="info" class="main" />
-      <CookieLaw>
+      <CookieLaw
+        theme="formato-fms"
+        transitionName="slideFromTop"
+        position="top"
+      >
         <div slot-scope="props">
           <p class="Cookie__content">{{ cookies.message }} <span></span></p>
           <div class="Cookie__buttons">
@@ -75,6 +79,8 @@ export default {
   --shadow-color: #d9d9d9;
   --low-contrast-color: #484d51;
   --high-contrast-color: #323538;
+  --white-color: #f1f1f1;
+  --black-color: #323538;
   --error-color: #eb3d3d;
 
   --menu-bg-color: var(--high-contrast-color);
@@ -88,19 +94,9 @@ export default {
   --shadow-color: #484d51;
   --low-contrast-color: #d9d9d9;
   --high-contrast-color: #f1f1f1;
+  --white-color: #f1f1f1;
+  --black-color: #323538;
   --error-color: #eb3d3d;
-
-  --menu-bg-color: var(--pure-color);
-  --menu-shadow-color: var(--bg-color);
-}
-
-#moon {
-  --main-color: #3d5af1;
-  --pure-color: #1a1a1a;
-  --bg-color: #323538;
-  --shadow-color: #484d51;
-  --low-contrast-color: #d9d9d9;
-  --high-contrast-color: #f1f1f1;
 
   --menu-bg-color: var(--pure-color);
   --menu-shadow-color: var(--bg-color);
@@ -125,9 +121,8 @@ body {
   }
 }
 
-.Cookie {
+.Cookie--formato-fms {
   padding: 20px;
-  border-top: 5px solid var(--bg-color);
   background: var(--shadow-color);
   > div {
     width: 100%;
@@ -146,15 +141,17 @@ body {
     }
     .Cookie__buttons {
       .Cookie__button {
+        border: none;
         text-decoration: none;
         font-size: 18px;
         margin-right: 20px;
         padding: 12px 40px;
         border-radius: 10px;
+        color: var(--white-color);
         background: var(--main-color);
         opacity: 0.9;
         &:hover {
-          background: var(--main-color);
+          background: var(--main-color) !important;
           opacity: 1;
         }
       }
@@ -167,7 +164,7 @@ body {
     padding-left: 0px;
     padding-bottom: 64px;
   }
-  .Cookie {
+  .Cookie--formato-fms {
     padding: 10px;
     > div {
       flex-direction: column;

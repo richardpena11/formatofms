@@ -26,9 +26,9 @@ export default {
   props: [
     "nombre",
     "contidadPatrones",
-    "hasPuntoExtra",
     "patrones",
     "patronesExtra",
+    "rondas",
     "ronda"
   ],
 
@@ -53,6 +53,19 @@ export default {
       return Array.from(
         this.$refs.patrones.querySelectorAll('input[type="checkbox"]')
       );
+    },
+
+    hasPuntoExtra() {
+      for (const ronda of this.rondas) {
+        if (ronda.value === this.ronda) {
+          if (this.nombre === this.$store.state.votacion.freestyler1) {
+            return ronda.freestyler1.puntoExtra;
+          } else if (this.nombre === this.$store.state.votacion.freestyler2) {
+            return ronda.freestyler2.puntoExtra;
+          }
+        }
+      }
+      return false;
     }
   },
 
