@@ -124,6 +124,7 @@ export default {
   width: 250px;
   height: 100%;
   transition: all 200ms;
+  z-index: 10;
 
   .item {
     .link {

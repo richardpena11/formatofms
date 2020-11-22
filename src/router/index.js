@@ -13,6 +13,7 @@ import addJornada from "../views/Admin/addJornada.vue";
 import addLiga from "../views/Admin/addLiga.vue";
 import addTemporada from "../views/Admin/addTemporada.vue";
 import cookies from "../views/law/cookies.vue";
+import nosotros from "../views/law/nosotros.vue";
 import notFound from "../views/notFound/index.vue";
 
 Vue.use(VueRouter);
@@ -81,6 +82,10 @@ const routes = [
   {
     path: "/cookies",
     component: cookies
+  },
+  {
+    path: "/nosotros",
+    component: nosotros
   },
   { path: "*", component: notFound }
 ];

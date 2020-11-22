@@ -23,6 +23,27 @@
         </router-link>
       </div>
     </div>
+    <footer class="footer">
+      <div class="menu">
+        <router-link to="/cookies">Cookies</router-link>
+        <router-link to="/nosotros">Nosotros</router-link>
+        <div class="redes">
+          <a
+            href="https://www.youtube.com/c/Nigatsu?sub_confirmation=1"
+            target="_blank"
+            class="redes__youtube"
+            ><font-awesome-icon class="icon" :icon="['fab', 'youtube']"
+          /> Youtube</a>
+          <a
+            href="https://www.youtube.com/c/Nigatsu?sub_confirmation=1"
+            target="_blank"
+            class="redes__twitter"
+            ><font-awesome-icon class="icon" :icon="['fab', 'twitter']"
+          /> Twitter</a>
+        </div>
+      </div>
+      <div class="version">Version {{ version }}</div>
+    </footer>
   </div>
 </template>
 
@@ -30,6 +51,11 @@
 import YoutubeSearch from "../../components/Votacion/Sidebar/Search/YoutubeSearch.vue";
 
 export default {
+  data() {
+    return {
+      version: null
+    };
+  },
   computed: {
     newInfo() {
       const info = this.info;
@@ -50,6 +76,15 @@ export default {
       return newInfo;
     }
   },
+  methods: {
+    getVersion() {
+      this.$http
+        .get("Version.json")
+        .then(response => response.json())
+        .then(data => (this.version = data))
+        .catch(err => console.error(err));
+    }
+  },
   props: ["info"],
   components: {
     YoutubeSearch
@@ -59,7 +94,8 @@ export default {
 
 <style lang="scss">
 .inicio-container {
-  height: 100vh;
+  position: relative;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -117,6 +153,59 @@ export default {
       border-radius: 30px;
       padding: 30px;
       background: var(--shadow-color);
+    }
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    .menu {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      a {
+        padding: 0 10px;
+        text-decoration: none;
+        font-size: 18px;
+        color: var(--low-contrast-color);
+        &:hover {
+          color: var(--high-contrast-color);
+        }
+      }
+      .redes {
+        display: flex;
+        align-items: center;
+        a {
+          padding: 2px;
+          margin: 0 8px;
+          text-decoration: none;
+          font-size: 18px;
+          color: var(--low-contrast-color);
+          &:hover {
+            color: var(--high-contrast-color);
+          }
+          border-bottom: 3px solid transparent;
+          transition: border 0.3s;
+        }
+        .redes__youtube {
+          &:hover {
+            border-bottom: 3px solid #FF0000;
+          }
+        }
+        .redes__twitter {
+          &:hover {
+            border-bottom: 3px solid #1DA1F2;
+          }
+        }
+      }
+    }
+    .version {
+      color: var(--high-contrast-color);
+      padding: 0 20px;
+      margin-left: auto;
     }
   }
 }

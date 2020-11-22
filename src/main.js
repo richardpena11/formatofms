@@ -19,6 +19,7 @@ import {
   faSignOutAlt,
   faPlus
 } from "@fortawesome/free-solid-svg-icons";
+import { faYoutube, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import VueYoutube from "vue-youtube";
 
@@ -35,7 +36,9 @@ library.add(
   faPlayCircle,
   faSearch,
   faSignOutAlt,
-  faPlus
+  faPlus,
+  faYoutube,
+  faTwitter
 );
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);

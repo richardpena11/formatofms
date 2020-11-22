@@ -2,7 +2,7 @@
 
 const defaultState = () => {
   return {
-    videoActual: "mNJz5L6wbCg",
+    videoActual: "VBnFzBoiqdo",
     rondaActual: "setup",
     ruta: null,
     formatoActual: "fms2020",
